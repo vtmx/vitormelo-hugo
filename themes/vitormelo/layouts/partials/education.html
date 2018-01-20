@@ -1,0 +1,13 @@
+<section class="section" id="education">
+    <div class="container">
+        <h2 class="title">{{ .Site.Data.education.title }}</h2>
+
+        {{ range .Site.Data.education.education }}
+            <div class="education" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+                <div class="name" itemprop="description"><a href="{{ .file }}" target="_blank">{{ .name }}</a></div>
+                <div class="org" itemprop="name"><a itemprop="url" href="{{ .org_link }}" target="_blank">{{ .org_name }}</a></div>
+                <div class="time"><span>{{ .year_start }}</span> &ndash; <span>{{ .year_end }}</span></div>
+            </div>
+        {{ end }}
+    </div>
+</section>

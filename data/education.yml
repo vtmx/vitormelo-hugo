@@ -1,0 +1,16 @@
+title: Formação Acadêmica
+
+education:
+    - name: Pós-Graduação em Design Digital
+      file: http://vitormelo.com.br/pos-graduacoes/design-digital.pdf
+      org_link: http://www.infnet.edu.br/
+      org_name: Instituto Infnet
+      year_start: 2011
+      year_end: 2014
+
+    - name: Formação em Análise de Sistemas
+      file: http://vitormelo.com.br/graduacoes/analise-de-sistemas-da-computacao.pdf
+      org_link: http://estacio.br/
+      org_name: Universidade Estácio de Sá
+      year_start: 2006
+      year_end: 2009
