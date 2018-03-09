@@ -1,5 +1,6 @@
 <section class="section" id="certifications">
     <div class="container">
+    
         <h2 class="title">{{ .Site.Data.certifications.title }}</h2>
 
         {{ range .Site.Data.certifications.certifications }}
@@ -9,5 +10,6 @@
                 <div class="time">{{ .year }}</div>
             </div>
         {{ end }}
+
     </div>
 </section>

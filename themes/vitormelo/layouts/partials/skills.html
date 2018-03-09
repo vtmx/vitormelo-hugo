@@ -1,5 +1,6 @@
 <section class="section" id="skills">
     <div class="container">
+
         <h2 class="title">{{ .Site.Data.skills.title }}</h2>
 
         <div class="skills" itemscope itemtype="http://schema.org/ItemList">
@@ -7,5 +8,6 @@
                 <abbr class="skill" itemprop="itemListElement" title="{{ .description }}">{{ .name }}</abbr>
             {{ end }}
         </div>
+        
     </div>
 </section>

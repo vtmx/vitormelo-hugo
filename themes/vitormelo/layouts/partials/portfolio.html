@@ -1,17 +1,18 @@
 <section class="section" id="portfolio">
     <div class="container">
+
         <h2 class="title">{{ .Site.Data.portfolio.title }}</h2>
 
         <div id="lightgallery" class="projects carousel" itemscope itemtype="http://schema.org/CreativeWork">
-
-        {{ range .Site.Data.portfolio.projects }}
-            <div class="project project-image">
-                <a class="link" itemprop="url" href="{{ .link }}" title="{{ .title }}" data-sub-html="{{ .title }}" target="_blank">
-                    <img class="img loading" itemprop="image" src="{{ .thumb }}" alt="Projeto {{ .title }}" width="300" height="200">
-                    <h3 class="name" itemprop="name">{{ .title }}</h3>
-                </a>
-            </div>
-        {{ end }}
+            {{ range .Site.Data.portfolio.projects }}
+                <div class="project project-image">
+                    <a class="link" itemprop="url" href="{{ .link }}" title="{{ .title }}" data-sub-html="{{ .title }}" target="_blank">
+                        <img class="img loading" itemprop="image" src="{{ .thumb }}" alt="Projeto {{ .title }}" width="300" height="200">
+                        <h3 class="name" itemprop="name">{{ .title }}</h3>
+                    </a>
+                </div>
+            {{ end }}
         </div>
+
     </div>
 </section>
