@@ -3,7 +3,7 @@
 		<h2 class="title">{{ .Site.Data.social.title }}</h2>
 
 		{{ range .Site.Data.social.social }}
-			<a class="social-link" itemprop="url" rel="me" target="_blank" href="{{ .link }}">{{ .name }}</a>
+			<a class="social-link" rel="me" target="_blank" href="{{ .link }}">{{ .name }}</a>
 		{{ end }}
 
 		<a class="to-top" href="#header">

@@ -2,11 +2,11 @@
 	<div class="container">
 		<h2 class="title">{{ .Site.Data.portfolio.title }}</h2>
 
-		<div class="projects" itemscope itemtype="http://schema.org/CreativeWork">
+		<div class="projects">
 			{{ range .Site.Data.portfolio.projects }}
 				<a class="project" href="{{ .link }}" title="{{ .title }}" data-sub-html="{{ .title }}" target="_blank">
-					<img class="img loading" itemprop="image" src="{{ .thumb }}" alt="Projeto {{ .title }}" width="300" height="200">
-					<h3 class="name" itemprop="name">{{ .title }}</h3>
+					<img class="img loading" src="{{ .thumb }}" alt="Projeto {{ .title }}" width="300" height="200">
+					<h3 class="name">{{ .title }}</h3>
 				</a>
 			{{ end }}
 		</div>

@@ -2,9 +2,9 @@
 	<div class="container">
 		<h2 class="title">{{ .Site.Data.skills.title }}</h2>
 
-		<div class="skills" itemscope itemtype="http://schema.org/ItemList">
+		<div class="skills">
 			{{ range .Site.Data.skills.skills }}
-				<abbr class="skill" itemprop="itemListElement" title="{{ .description }}">{{ .name }}</abbr>
+				<abbr class="skill" title="{{ .description }}">{{ .name }}</abbr>
 			{{ end }}
 		</div>		
 	</div>

@@ -4,8 +4,8 @@
 
 		{{ range .Site.Data.experiences.experiences }}
 			<div class="experience">
-				<div class="name" itemprop="jobTitle">{{ .name }}</div>
-				<div class="org" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="{{ .org_link }}" target="_blank"><span itemprop="name">{{ .org_name }}</span></a></div>
+				<div class="name">{{ .name }}</div>
+				<div class="org"><a href="{{ .org_link }}" target="_blank"><span>{{ .org_name }}</span></a></div>
 				<div class="time"><span>{{ .date_start }}</span> &ndash; <span>{{ .date_end }}</span></div>
 			</div>
 		{{ end }}		

@@ -60,7 +60,7 @@ $(document).ready(function() {
 		]
 	 });
 
-	 // Lightgallery
+	// Lightgallery
 	$('.projects').lightGallery({
 		selector: '.project',
 		counter: false,
