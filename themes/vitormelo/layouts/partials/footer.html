@@ -1,37 +1,7 @@
+</main>
+
 <!-- Script -->
 <script src="dist/js/script.js"></script>
-
-<script>
-	//<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
-		//<?php if( get_field('project-gallery')): ?>
-			$('.<?php echo $post->post_name; ?>').on('click', function(e) {
-				e.preventDefault();
-
-				$(this).lightGallery({
-					counter: false,
-					download: false,
-					showThumbByDefault: false,
-					preload: 3,
-					dynamic: true,
-					dynamicEl: [
-						<?php $gallery = get_field('project-gallery'); ?>
-						<?php foreach( $gallery as $image ): ?>
-							{
-								'src': '',
-								'thumb': '',
-								'subHtml': '<div class="lg-title"></div>'
-							},
-						<?php endforeach; ?>
-					]
-				});
-			});
-		//<?php else: ?>
-			$('.project-video').lightGallery({
-				counter: false,
-				download: false,
-			});
-		//<?php endif; ?>
-</script>
 
 </body>
 </html>

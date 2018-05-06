@@ -3,12 +3,7 @@ document.documentElement.className = document.documentElement.className.replace(
 
 $(document).ready(function() {
 
-	var $pathImg = window.location.href + 'wp-content/themes/vitormelo/img';
-
-
 	// Animate scrolling
-	// ----------------------------------------------------------------------------
-
 	if (window.matchMedia('(min-width: 480px)').matches) {
 		$('.container').addClass('hidden').viewportChecker({
 			classToAdd: 'visible animation fade-in-up',
@@ -16,14 +11,11 @@ $(document).ready(function() {
 		});
 	}
 
-
 	// Go to content
-	// ----------------------------------------------------------------------------
 	$('.skip-content, .to-content').click(function(e) {
 		e.preventDefault();
 		$('html, body').animate({ scrollTop: $('#about').offset().top }, 'slow');
 	});
-
 
 	// Go to top
 	$('.to-top').click(function(e) {
@@ -31,35 +23,34 @@ $(document).ready(function() {
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
 	});
 
-
 	// Slick
-	// ----------------------------------------------------------------------------
-	$('.carousel').slick({
+	$('.projects').slick({
 		slidesToShow   : 4,
-	    slidesToScroll : 4,
+		slidesToScroll : 4,
 		speed          : 800,
 		infinite       : false,
+		arrows         : true,
 		dots           : true,
 		autoplay       : true,
-		autoplaySpeed  : 2000,
+		autoplaySpeed  : 5000,
 		accessibility  : true,
 
 		responsive: [
-		    {
-		    	breakpoint: 1450,
-		    	settings: {
-			        slidesToShow: 3,
-					slidesToScroll: 3
-		    	}
-		    },
 			{
-		    	breakpoint: 1100,
-		    	settings: {
-			        slidesToShow: 2,
+				breakpoint: 1450,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
 					slidesToScroll: 2,
-		    	}
-		    },
-		    {
+				}
+			},
+			{
 				breakpoint: 800,
 				settings: {
 					slidesToShow: 1,
@@ -67,5 +58,15 @@ $(document).ready(function() {
 				}
 			}
 		]
-     });
+	 });
+
+	 // Lightgallery
+	$('.projects').lightGallery({
+		selector: '.project',
+		counter: false,
+		download: false,
+		preload: 3,
+		mousewheel: true
+	});
+	
 });

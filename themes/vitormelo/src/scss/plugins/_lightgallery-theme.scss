@@ -10,6 +10,14 @@
 	padding: 20px;
 }
 
+.lg-icon {
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
 .lg-icon, .lg-actions {
     transition: .2s;
 }

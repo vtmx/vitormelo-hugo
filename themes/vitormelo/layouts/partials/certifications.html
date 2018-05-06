@@ -1,15 +1,13 @@
 <section class="section" id="certifications">
-    <div class="container">
-    
-        <h2 class="title">{{ .Site.Data.certifications.title }}</h2>
+	<div class="container">	
+		<h2 class="title">{{ .Site.Data.certifications.title }}</h2>
 
-        {{ range .Site.Data.certifications.certifications }}
-            <div class="certification" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                <div class="name" itemprop="description"><a href="{{ .file }}" target="_blank">{{ .name }}</a></div>
-                <div class="org" itemprop="name"><a itemprop="url" href="{{ .org_link }}" target="_blank">{{ .org_name }}</a></div>
-                <div class="time">{{ .year }}</div>
-            </div>
-        {{ end }}
-
-    </div>
+		{{ range .Site.Data.certifications.certifications }}
+			<div class="certification" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+				<div class="name" itemprop="description"><a href="{{ .file }}" target="_blank">{{ .name }}</a></div>
+				<div class="org" itemprop="name"><a itemprop="url" href="{{ .org_link }}" target="_blank">{{ .org_name }}</a></div>
+				<div class="time">{{ .year }}</div>
+			</div>
+		{{ end }}
+	</div>
 </section>

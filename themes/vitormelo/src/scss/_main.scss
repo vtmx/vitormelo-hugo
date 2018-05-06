@@ -8,7 +8,6 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	-moz-font-feature-settings: 'liga', 'kern';
 	color: $color-base;
 }
 
@@ -132,6 +131,7 @@ html, body, .page {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
+	background-image: url(#{$path-img}/cover-header.jpg);
 	color: #fff;
 }
 
@@ -151,6 +151,7 @@ html, body, .page {
 .skip-content:hover, .skip-content:active, .skip-content:focus {
 	top: 0;
 	color: #fff;
+	outline: 2px solid #fff;
 }
 
 // =logo
@@ -174,14 +175,14 @@ html, body, .page {
 	height: 186px;
 	margin-bottom: 20px;
 	filter: drop-shadow(0px 5px 0 rgba(0, 0, 0, 0.1));
-    animation-delay: 0;
+	animation-delay: 0;
 }
 
 .type {
 	height: 29px;
 	margin-bottom: 10px;
 	filter: drop-shadow(0px 3px 0 rgba(0, 0, 0, 0.1));
-    animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 .jobtitle {
@@ -190,7 +191,7 @@ html, body, .page {
 	letter-spacing: 1px;
 	text-shadow: 0 1px 1px #000;
 	text-shadow: 0 1px 1px rgba(0,0,0,.5);
-    animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 // to-content
@@ -208,7 +209,7 @@ html, body, .page {
 	text-align: center;
 	color: #fff;
 	transition: border-color .3s;
-    animation-delay: 2s;
+	animation-delay: 2s;
 
 	&:hover, &:active {
 		border-color: $color-primary;
@@ -224,7 +225,7 @@ html, body, .page {
 		height: 60px;
 		fill: #fff;
 		transition: all .3s;
-        animation: to-content 1s infinite;
+		animation: to-content 1s infinite;
 	}
 }
 
@@ -243,7 +244,7 @@ html, body, .page {
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-    animation-delay: 3s;
+	animation-delay: 3s;
 }
 
 .header-overlay {
@@ -269,7 +270,7 @@ html, body, .page {
 // =sections
 // -----------------------------------------------------------------------------
 
-.section, .footer {
+.section {
 	clear: both;
 	overflow: hidden;
 	padding: 40px 0;
@@ -345,7 +346,7 @@ html, body, .page {
 // =skills
 // -----------------------------------------------------------------------------
 
-#skills, #footer {
+#skills, #social {
 	background: #ebebeb;
 
 	.skill {
@@ -366,11 +367,11 @@ html, body, .page {
 		position: relative;
 		margin: 0 auto;
 
-	.link {
+	.project {
 		position: relative;
 		width: 300px;
 		display: inline-block;
-		margin: 0 10px 40px 10px;
+		margin: 0 0 40px 0;
 		padding-top: 10px;
 		color: #ccc;
 		transition: all .2s;
@@ -451,10 +452,6 @@ html, body, .page {
 
 		&:hover, &:focus, &:active {
 			opacity: .3;
-		}
-
-		&:active {
-			//transform: scale(.9);
 		}
 	}
 
@@ -547,7 +544,7 @@ html, body, .page {
 		height: 40px;
 		fill: $color-primary;
 		transition: all .3s;
-        animation: to-content 1s infinite;
+		animation: to-content 1s infinite;
 	}
 
 	&:hover .icon {
@@ -677,7 +674,7 @@ html, body, .page {
 		max-width: none;
 		text-align: center;
 		color: #fff;
-        animation-delay: 1.5s;
+		animation-delay: 1.5s;
 	}
 
 	.title {
@@ -696,10 +693,10 @@ html, body, .page {
 }
 
 //
-// =footer
+// =social
 // -----------------------------------------------------------------------------
 
-.footer {
+#social {
 	font-size: 16px;
 
 	a {
@@ -727,7 +724,7 @@ html, body, .page {
 			height: 40px;
 			fill: #fff;
 			transition: all .3s;
-            animation: to-content 1s infinite;
+			animation: to-content 1s infinite;
 		}
 	}
 }
@@ -737,8 +734,8 @@ html, body, .page {
 // -----------------------------------------------------------------------------
 
 .animation {
-    animation-duration: 1.5s;
-    animation-fill-mode: both;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
 }
 
 // fade in
@@ -748,7 +745,7 @@ html, body, .page {
 }
 
 .fade-in {
-    animation-name: fade-in;
+	animation-name: fade-in;
 }
 
 // fade up
@@ -758,7 +755,7 @@ html, body, .page {
 }
 
 .fade-in-up {
-    animation-name: fade-in-up;
+	animation-name: fade-in-up;
 }
 
 // fade down
@@ -768,7 +765,7 @@ html, body, .page {
 }
 
 .fade-in-down {
-    animation-name: fade-in-down;
+	animation-name: fade-in-down;
 }
 
 // fade left
@@ -778,7 +775,7 @@ html, body, .page {
 }
 
 .fade-in-left {
-    animation-name: fade-in-left;
+	animation-name: fade-in-left;
 }
 
 // fade right
@@ -788,7 +785,7 @@ html, body, .page {
 }
 
 .fade-in-left {
-    animation-name: fade-in-right;
+	animation-name: fade-in-right;
 }
 
 // fade out
@@ -798,7 +795,7 @@ html, body, .page {
 }
 
 .fade-out {
-    animation-name: fade-out;
+	animation-name: fade-out;
 }
 
 // fade out right
@@ -808,7 +805,7 @@ html, body, .page {
 }
 
 .fade-out-right {
-    animation-name: fade-out-right;
+	animation-name: fade-out-right;
 }
 
 //
@@ -816,19 +813,19 @@ html, body, .page {
 // -----------------------------------------------------------------------------
 
 @media (max-width: 1450px) {
-	.carousel {
+	.projects{
 		max-width: 970px;
 	}
 }
 
 @media (max-width: 1100px) {
-	.carousel {
+	.projects{
 		max-width: 650px;
 	}
 }
 
 @media (max-width: 800px) {
-	.carousel {
+	.projects{
 		max-width: 320px;
 	}
 }
@@ -843,7 +840,7 @@ html, body, .page {
 	// =section
 	// -----------------------------------------------------------------------------
 
-	.section, .footer {
+	.section {
 		padding: 40px 10px;
 	}
 }
@@ -897,7 +894,7 @@ html, body, .page {
 	// =section
 	// -----------------------------------------------------------------------------
 
-	.section, .footer {
+	.section {
 		padding: 20px 10px;
 	}
 

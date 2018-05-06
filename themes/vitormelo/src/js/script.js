@@ -9,7 +9,6 @@
 //@prepros-prepend plugins/smoothscroll.js
 //@prepros-prepend plugins/slick.js
 //@prepros-prepend plugins/lightgallery/lightgallery.js
-//@prepros-prepend plugins/lightgallery/lg-thumbnail.js
 //@prepros-prepend plugins/lightgallery/lg-video.js
 //@prepros-prepend plugins/lightgallery/mousewheel.js
 

@@ -7,7 +7,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: 'liga', 'kern';
   color: #444; }
 
 ::-moz-selection {
@@ -48,7 +47,7 @@ img {
   height: auto; }
 
 .loading {
-  background: #2d3035 url(../../../../../wp-content/themes/vitormelo/dist/img/loading.gif) no-repeat center center;
+  background: #2d3035 url(../../dist/img/loading.gif) no-repeat center center;
   font-size: 16px;
   text-align: center;
   color: #ccc; }
@@ -101,6 +100,7 @@ html, body, .page {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  background-image: url(../../dist/img/cover-header.jpg);
   color: #fff; }
 
 .skip-content {
@@ -117,7 +117,8 @@ html, body, .page {
 
 .skip-content:hover, .skip-content:active, .skip-content:focus {
   top: 0;
-  color: #fff; }
+  color: #fff;
+  outline: 2px solid #fff; }
 
 .logo {
   position: relative;
@@ -246,7 +247,7 @@ html, body, .page {
 .nav {
   display: none; }
 
-.section, .footer {
+.section {
   clear: both;
   overflow: hidden;
   padding: 40px 0;
@@ -258,7 +259,7 @@ html, body, .page {
   font-family: 'Segoe UI Light', 'Segoe UI', 'Open Sans', arial, sans-serif; }
 
 #portfolio {
-  background: #282b2d url(../../../../../wp-content/themes/vitormelo/dist/img/dark-pattern.jpg);
+  background: #282b2d url(../../dist/img/dark-pattern.jpg);
   color: #eee; }
 
 #about, #education {
@@ -296,9 +297,9 @@ html, body, .page {
   .service .description {
     font-size: 16px; }
 
-#skills, #footer {
+#skills, #social {
   background: #ebebeb; }
-  #skills .skill, #footer .skill {
+  #skills .skill, #social .skill {
     display: inline-block;
     padding: 10px;
     margin: 0 3px 10px 3px;
@@ -309,17 +310,17 @@ html, body, .page {
 .projects {
   position: relative;
   margin: 0 auto; }
-  .projects .link {
+  .projects .project {
     position: relative;
     width: 300px;
     display: inline-block;
-    margin: 0 10px 40px 10px;
+    margin: 0 0 40px 0;
     padding-top: 10px;
     color: #ccc;
     -webkit-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s; }
-    .projects .link .img {
+    .projects .project .img {
       display: block;
       width: 300px;
       height: 200px;
@@ -331,35 +332,35 @@ html, body, .page {
       filter: grayscale(50%);
       opacity: .8;
       transition: all .2s; }
-    .projects .link .name {
+    .projects .project .name {
       font-size: 18px;
       line-height: 30px; }
-    .projects .link:hover {
+    .projects .project:hover {
       color: #fff;
       -webkit-transform: scale(1.02);
       -ms-transform: scale(1.02);
       transform: scale(1.02);
       cursor: -webkit-zoom-in;
       cursor: zoom-in; }
-      .projects .link:hover .img {
+      .projects .project:hover .img {
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
         opacity: 1;
         -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-      .projects .link:hover .name {
+      .projects .project:hover .name {
         text-shadow: 0 0px 20px black; }
-    .projects .link:active {
+    .projects .project:active {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
       -webkit-transform: translateY(3px);
       -ms-transform: translateY(3px);
       transform: translateY(3px); }
-      .projects .link:active .img {
+      .projects .project:active .img {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%); }
-    .projects .link:focus {
+    .projects .project:focus {
       outline: none; }
   .projects .slick-arrow {
     width: 50px;
@@ -381,11 +382,11 @@ html, body, .page {
       opacity: .3; }
   .projects .slick-prev {
     left: -40px;
-    background: url(../../../../../wp-content/themes/vitormelo/dist/img/icons/angle-left.svg);
+    background: url(../../dist/img/icons/angle-left.svg);
     background-size: cover; }
   .projects .slick-next {
     right: -40px;
-    background: url(../../../../../wp-content/themes/vitormelo/dist/img/icons/angle-right.svg);
+    background: url(../../dist/img/icons/angle-right.svg);
     background-size: cover; }
   .projects .slick-dots {
     bottom: 0; }
@@ -540,9 +541,9 @@ html, body, .page {
 .error404 .description {
   font-size: 16px; }
 
-.footer {
+#social {
   font-size: 16px; }
-  .footer a {
+  #social a {
     display: inline-block;
     margin: 0 3px 10px 3px;
     padding: 10px 20px;
@@ -551,15 +552,15 @@ html, body, .page {
     -webkit-transition: background-color .3s;
     -o-transition: background-color .3s;
     transition: background-color .3s; }
-    .footer a:hover, .footer a:active {
+    #social a:hover, #social a:active {
       background: #1ca379; }
-  .footer .to-top {
+  #social .to-top {
     display: block;
     width: 80px;
     min-height: 35px;
     margin: 20px auto 0;
     padding: 5px 20px; }
-    .footer .to-top .icon {
+    #social .to-top .icon {
       width: 40px;
       height: 40px;
       fill: #fff;
@@ -708,22 +709,22 @@ html, body, .page {
   animation-name: fade-out-right; }
 
 @media (max-width: 1450px) {
-  .carousel {
+  .projects {
     max-width: 970px; } }
 
 @media (max-width: 1100px) {
-  .carousel {
+  .projects {
     max-width: 650px; } }
 
 @media (max-width: 800px) {
-  .carousel {
+  .projects {
     max-width: 320px; } }
 
 @media (max-width: 1300px) {
   #about .avatar {
     width: 100%;
     height: auto; }
-  .section, .footer {
+  .section {
     padding: 40px 10px; } }
 
 @media (max-width: 900px) {
@@ -749,7 +750,7 @@ html, body, .page {
     width: 100%;
     margin: 0;
     left: 0; }
-  .section, .footer {
+  .section {
     padding: 20px 10px; }
   .service {
     margin-bottom: 40px; }
@@ -865,13 +866,13 @@ html, body, .page {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("../../../../../wp-content/themes/vitormelo/dist/img/loading.gif") center center no-repeat; }
+  background: #fff url("../../dist/img/loading.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("../../../../../wp-content/themes/vitormelo/dist/fonts/slick.eot");
-  src: url("../../../../../wp-content/themes/vitormelo/dist/fonts/slick.eot?#iefix") format("embedded-opentype"), url("../../../../../wp-content/themes/vitormelo/dist/fonts/slick.woff") format("woff"), url("../../../../../wp-content/themes/vitormelo/dist/fonts/slick.ttf") format("truetype"), url("../../../../../wp-content/themes/vitormelo/dist/fonts/slick.svg#slick") format("svg");
+  src: url("../../dist/fonts/slick.eot");
+  src: url("../../dist/fonts/slick.eot?#iefix") format("embedded-opentype"), url("../../dist/fonts/slick.woff") format("woff"), url("../../dist/fonts/slick.ttf") format("truetype"), url("../../dist/fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -991,8 +992,8 @@ html, body, .page {
 
 @font-face {
   font-family: 'lg';
-  src: url("../../../../../wp-content/themes/vitormelo/dist/fonts/lg.eot?n1z373");
-  src: url("../../../../../wp-content/themes/vitormelo/dist/fonts/lg.eot?#iefixn1z373") format("embedded-opentype"), url("../../../../../wp-content/themes/vitormelo/dist/fonts/lg.woff?n1z373") format("woff"), url("../../../../../wp-content/themes/vitormelo/dist/fonts/lg.ttf?n1z373") format("truetype"), url("../../../../../wp-content/themes/vitormelo/dist/fonts/lg.svg?n1z373#lg") format("svg");
+  src: url("../../dist/fonts/lg.eot?n1z373");
+  src: url("../../dist/fonts/lg.eot?#iefixn1z373") format("embedded-opentype"), url("../../dist/fonts/lg.woff?n1z373") format("woff"), url("../../dist/fonts/lg.ttf?n1z373") format("truetype"), url("../../dist/fonts/lg.svg?n1z373#lg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1960,6 +1961,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-outer .lg-image {
   padding: 20px; }
 
+.lg-icon {
+  border: none; }
+  .lg-icon:focus {
+    outline: none; }
+
 .lg-icon, .lg-actions {
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -2015,7 +2021,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   filter: alpha(opacity=100); }
 
 .ie6 #portfolio a:after, .ie7 #portfolio a:after, .ie8 #portfolio a:after {
-  background: url(../../../../../wp-content/themes/vitormelo/dist/img/portfolio-overlay.png); }
+  background: url(../../dist/img/portfolio-overlay.png); }
 
 .ie6 #portfolio a:hover:after, .ie7 #portfolio a:hover:after, .ie8 #portfolio a:hover:after {
   background: transparent; }

@@ -1,44 +1,44 @@
-title: Certificação
+title: Certificações
 
 certifications:
     - name: Cloud Computing
       file: http://vitormelo.com.br/certificacoes/exin-cloud-computing-foundation.pdf
-      org_link: https://www.exin.com/BR/pt/home/
       org_name: EXIN
+      org_link: https://www.exin.com/BR/pt/home/
       year: 2016
 
     - name: Green IT Citizen
       file: http://vitormelo.com.br/certificacoes/exin-green-it-citizen.pdf
-      org_link: https://www.exin.com/BR/pt/home/
       org_name: EXIN
+      org_link: https://www.exin.com/BR/pt/home/
       year: 2015
 
     - name: ISO/IEC 27002
       file: http://vitormelo.com.br/certificacoes/exin-iso-27002.pdf
-      org_link: https://www.exin.com/BR/pt/home/
       org_name: EXIN
+      org_link: https://www.exin.com/BR/pt/home/
       year: 2015
 
     - name: ISO/IEC 20000
       file: http://vitormelo.com.br/certificacoes/exin-iso-20000.pdf
-      org_link: https://www.exin.com/BR/pt/home/
       org_name: EXIN
+      org_link: https://www.exin.com/BR/pt/home/
       year: 2014
 
     - name: MCTS 70-480
       file: http://vitormelo.com.br/certificacoes/mcp-070-480.pdf
-      org_link: https://www.microsoft.com/learning/pt-br/mcts-certification.aspx
       org_name: Microsoft
+      org_link: https://www.microsoft.com/learning/pt-br/mcts-certification.aspx
       year: 2013
 
     - name: MCTS 70-680
       file: http://vitormelo.com.br/certificacoes/mcp-070-680.pdf
-      org_link: https://www.microsoft.com/learning/pt-br/mcts-certification.aspx
       org_name: Microsoft
+      org_link: https://www.microsoft.com/learning/pt-br/mcts-certification.aspx
       year: 2013
 
     - name: Itil V3
       file: http://vitormelo.com.br/certificacoes/exin-itil-v3.pdf
-      org_link: https://www.exin.com/BR/pt/home/
       org_name: EXIN
+      org_link: https://www.exin.com/BR/pt/home/
       year: 2012

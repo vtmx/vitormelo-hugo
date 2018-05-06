@@ -1,2 +1,0 @@
-# vitormelo-hugo
-Site teste.
