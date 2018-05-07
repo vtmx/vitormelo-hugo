@@ -1,31 +1,38 @@
 title: Projetos Recentes
 
 projects:
-    - title: Girl
-      thumb: http://vitormelo.com.br/wp-content/uploads/sword-girl-thumb.jpg
-      link: http://vitormelo.com.br/wp-content/uploads/sword-girl.jpg
+    - title: Vitor Galaxy
+      thumb: portfolio/vitor-galaxy-thumb.png
+      link: portfolio/vitor-galaxy.jpg
+
+    - title: Rocket League - Kiver
+      thumb: portfolio/rocket-league-kiver-thumb.jpg
+      link: https://www.youtube.com/watch?v=EZU9FxXDFqw
+
+    - title: Rocket League - Vitor Melo
+      thumb: portfolio/rocket-league-vitor-melo-thumb.jpg
+      link: https://www.youtube.com/watch?v=sQQ38aO1Esw
+
+    - title: Rocket League - Blaze Wings
+      thumb: portfolio/rocket-league-blazewings-thumb.jpg
+      link: https://www.youtube.com/watch?v=kr2-WNm5u1Q
+
+    - title: Rocket League - Junior Play
+      thumb: portfolio/rocket-league-junior-thumb.jpg
+      link: https://www.youtube.com/watch?v=0KnDUEiAizc
 
     - title: Rocket League Marcus
-      type: video
-      thumb: http://vitormelo.com.br/wp-content/uploads/rocket-league-marcus-thumb.jpg
+      thumb: portfolio/rocket-league-marcus-thumb.jpg
       link: https://www.youtube.com/watch?v=XdFO6XtZg4g
 
-    - title: Lighting
-      thumb: http://vitormelo.com.br/wp-content/uploads/lighting-poly-thumb.jpg
-      link: http://vitormelo.com.br/wp-content/uploads/lighting-poly.jpg
+    - title: Rocket League STK
+      thumb: portfolio/rocket-league-stk-thumb.jpg
+      link: https://www.youtube.com/watch?v=BBaUHfLdtIQ
 
-    - title: Lighting
-      thumb: http://vitormelo.com.br/wp-content/uploads/lighting-poly-thumb.jpg
-      link: http://vitormelo.com.br/wp-content/uploads/lighting-poly.jpg
+    - title: Rocket League - Ghosti
+      thumb: portfolio/rocket-league-ghosti-thumb.jpg
+      link: https://www.youtube.com/watch?v=VfvwNTeZSz0
 
-    - title: Lighting
-      thumb: http://vitormelo.com.br/wp-content/uploads/lighting-poly-thumb.jpg
-      link: http://vitormelo.com.br/wp-content/uploads/lighting-poly.jpg
-
-    - title: Lighting
-      thumb: http://vitormelo.com.br/wp-content/uploads/lighting-poly-thumb.jpg
-      link: http://vitormelo.com.br/wp-content/uploads/lighting-poly.jpg
-
-    - title: Lighting
-      thumb: http://vitormelo.com.br/wp-content/uploads/lighting-poly-thumb.jpg
-      link: http://vitormelo.com.br/wp-content/uploads/lighting-poly.jpg
+    - title: Rocket League - Jack
+      thumb: portfolio/rocket-league-jack-thumb.jpg
+      link: https://www.youtube.com/watch?v=oMd8NMVveiM
