@@ -1,6 +1,12 @@
 title: Certificações
 
 certifications:
+    - name: Agile Scrum Foundation
+      file: certificacoes/exin-agile-scrum-foundation.pdf
+      org_name: EXIN
+      org_link: https://www.exin.com/BR/pt/home/
+      year: 2019
+
     - name: Cloud Computing
       file: certificacoes/exin-cloud-computing-foundation.pdf
       org_name: EXIN
