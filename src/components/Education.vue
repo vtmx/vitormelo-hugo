@@ -1,0 +1,21 @@
+<template>
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="title">{{ education.title }}</h2>
+
+      {% for education in education.educations %}
+      <div class="education">
+        <div class="name">
+          <a href="{{ education.file }}" target="_blank">{{ education.name }}</a>
+        </div>
+        <div class="org">
+          <a href="{{ education.org_link }}" target="_blank">{{ education.org_name }}</a>
+        </div>
+        <div class="time">
+          <span>{{ education.year_start }}</span> &ndash; <span>{{ education.year_end }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</template>
