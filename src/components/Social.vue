@@ -1,16 +1,24 @@
 <template>
-  <footer id="social" class="section">
-    <div class="container">
-      <h2 class="title">{{ social.title }}</h2>
+  <div class="container">
+    <h2 class="title">{{ title }}</h2>
 
-      {% for item in social.social %}
-      <a class="social-link" rel="me" target="_blank" href="{{ item.link }}">{{ item.name }}</a>
-      {% endfor %}
-
-      <a class="to-top" href="#header">
-        <svg class="icon icon-angle-up"><use xlink:href="#icon-angle-up"></use></svg>
-        <span class="text-hide">Retornar ao topo</span>
-      </a>
+    <div class="social" v-for="social in social" :key="social.name">
+      <a class="social-link" rel="me" target="_blank" :href="teste + social.link">{{ social.name }}</a>
     </div>
-  </footer>
+  </div>
 </template>
+
+<script>
+import social from '../data/social.json';
+export default {
+  data() {
+    return {
+      title: 'Social',
+      social,
+    };
+  },
+};
+</script>
+
+<style scoped>
+</style>

@@ -1,19 +1,29 @@
 <template>
   <section id="certifications" class="section">
     <div class="container">
-      <h2 class="title">{{ certifications.title }}</h2>
-
-      {% for certification in certifications.certifications %}
-      <div class="certification">
-        <div class="name">
-          <a href="{{ certification.file }}" target="_blank">{{ certification.name }}</a>
+      <h2 class="title">{{ title }}</h2>
+      <div class="certifications" v-for="certification in certifications" :key="certification.name">
+        <div class="certification">
+          <div class="name">{{ certification.name }}</div>
+          <div class="org">{{ certification.org_name }}</div>
+          <div class="time">{{ certification.year }}</div>
         </div>
-        <div class="org">
-          <a href="{{ certification.org_link }}" target="_blank">{{ certification.org_name }}</a>
-        </div>
-        <div class="time">{{ certification.year }}</div>
       </div>
-      {% endfor %}
     </div>
   </section>
 </template>
+
+<script>
+import certifications from '../data/certifications.json';
+export default {
+  data() {
+    return {
+      title: 'Certificações',
+      certifications,
+    };
+  },
+};
+</script>
+
+<style scoped>
+</style>

@@ -1,9 +1,9 @@
 {
   "name": "vitormelo-vue",
-  "version": "0.1.0",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve",
+    "dev": "clear & vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

@@ -1,21 +1,34 @@
 <template>
   <section id="education" class="section">
     <div class="container">
-      <h2 class="title">{{ education.title }}</h2>
+      <h2 class="title">{{ title }}</h2>
 
-      {% for education in education.educations %}
-      <div class="education">
+      <div class="education" v-for="education in education" :key="education.name">
         <div class="name">
-          <a href="{{ education.file }}" target="_blank">{{ education.name }}</a>
+          <a :href="education.file" target="_blank">{{ education.name }}</a>
         </div>
         <div class="org">
-          <a href="{{ education.org_link }}" target="_blank">{{ education.org_name }}</a>
+          {{ education.org_name }}
         </div>
         <div class="time">
           <span>{{ education.year_start }}</span> &ndash; <span>{{ education.year_end }}</span>
         </div>
       </div>
-      {% endfor %}
     </div>
   </section>
 </template>
+
+<script>
+import education from '../data/education.json';
+export default {
+  data() {
+    return {
+      title: 'Formação',
+      education,
+    };
+  },
+};
+</script>
+
+<style scoped>
+</style>
