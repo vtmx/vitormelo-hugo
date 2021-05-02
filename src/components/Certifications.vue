@@ -16,6 +16,8 @@
 <script>
 import certifications from '../data/certifications.json';
 export default {
+  name: 'Certification',
+
   data() {
     return {
       title: 'Certificações',

@@ -2,7 +2,6 @@
   <section id="skills" class="section">
     <div class="container">
       <h2 class="title">{{ title }}</h2>
-
       <div class="skills" v-for="skill in skills" :key="skill">
         <div>{{ skill }}</div>
       </div>
@@ -13,6 +12,8 @@
 <script>
 import skills from '../data/skills.json';
 export default {
+  name: 'Skills',
+
   data() {
     return {
       title: 'Habilidades',

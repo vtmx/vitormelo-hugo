@@ -2,11 +2,8 @@
   <section id="education" class="section">
     <div class="container">
       <h2 class="title">{{ title }}</h2>
-
       <div class="education" v-for="education in education" :key="education.name">
-        <div class="name">
-          <a :href="education.file" target="_blank">{{ education.name }}</a>
-        </div>
+        <div class="name">{{ education.name }}</div>
         <div class="org">
           {{ education.org_name }}
         </div>
@@ -21,6 +18,8 @@
 <script>
 import education from '../data/education.json';
 export default {
+  name: 'Education',
+
   data() {
     return {
       title: 'Formação',
