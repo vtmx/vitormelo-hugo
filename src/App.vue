@@ -16,6 +16,7 @@ import Experiences from './components/Experiences.vue';
 import Services from './components/Services.vue';
 import Skills from './components/Skills.vue';
 import Social from './components/Social.vue';
+import './scss/main.scss';
 
 export default {
   name: 'App',

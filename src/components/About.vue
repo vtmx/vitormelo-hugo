@@ -10,18 +10,16 @@
 
 <script>
 import about from '../data/about.json';
-import config from '../data/config.json';
 export default {
   name: 'About',
 
   data() {
     return {
       about,
-      config,
     };
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
