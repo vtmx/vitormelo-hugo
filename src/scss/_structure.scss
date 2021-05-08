@@ -1,0 +1,15 @@
+:root {
+  --gap: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: var(--body-bg);
+  color: var(--body-fg);
+}
+
+h2 {
+  color: var(--section-title-fg);
+}

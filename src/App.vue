@@ -1,10 +1,11 @@
 <template>
+  <Nav />
   <About />
-  <Certifications />
-  <Education />
-  <Experiences />
   <Services />
+  <Education />
+  <Certifications />
   <Skills />
+  <Experiences />
   <Social />
 </template>
 
@@ -13,6 +14,7 @@ import About from './components/About.vue';
 import Certifications from './components/Certifications.vue';
 import Education from './components/Education.vue';
 import Experiences from './components/Experiences.vue';
+import Nav from './components/Nav.vue';
 import Services from './components/Services.vue';
 import Skills from './components/Skills.vue';
 import Social from './components/Social.vue';
@@ -25,6 +27,7 @@ export default {
     Certifications,
     Education,
     Experiences,
+    Nav,
     Services,
     Skills,
     Social,

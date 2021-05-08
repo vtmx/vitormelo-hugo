@@ -1,13 +1,56 @@
-:root {
-  --bg-body: #fff;
-  --primary: #0099e5;
-  --gray: #eee;
+// https://material.io/resources/color
+// https://www.materialui.co/colors
+// https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637
+// Primary: Light Blue 600
 
-  .theme-dark {
-    --bg-body: #121212;
+:root {
+  // colors
+  --white: #fff;
+  --grey050: #fafafa;
+  --grey100: #f5f5f5;
+  --grey200: #eeeeee;
+  --grey300: #e0e0e0;
+  --grey400: #bdbdbd;
+  --grey500: #9e9e9e;
+  --grey600: #757575;
+  --grey700: #616161;
+  --grey800: #424242;
+  --grey900: #212121;
+  --dark-grey: #121212;
+  --black: #000;
+
+  // primary
+  --primary: #039be5;
+  --primary-light: #63ccff;
+  --primary-dark: #006db3;
+
+  // body
+  --body-bg: var(--white);
+  --body-fg: var(--grey700);
+
+  // section
+  --section-title-fg: #333;
+
+  // button
+  --btn-bg: var(--grey300);
+  --btn-fg: var(--primary);
+  --btn-hover-bg: ();
+  --btn-hover-fg: ();
+
+  // dark mode
+  .color-scheme-dark {
+    --body-bg: var(--dark-grey);
+    --body-fg: var(--grey50);
+  }
+
+  // high contrast
+  .color-scheme-contrast {
+    --body-bg: var(--black);
+    --body-fg: var(--white);
   }
 }
 
-body {
-  background: var(--bg-body);
+::selection {
+  background: var(--primary-light);
+  color: var(--black);
 }
