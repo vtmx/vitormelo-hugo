@@ -44,7 +44,7 @@
   }
 
   // high contrast
-  .color-scheme-contrast {
+  .contrast-hight {
     --body-bg: var(--black);
     --body-fg: var(--white);
   }
@@ -52,5 +52,4 @@
 
 ::selection {
   background: var(--primary-light);
-  color: var(--black);
 }

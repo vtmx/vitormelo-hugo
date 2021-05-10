@@ -1,38 +1,32 @@
 [
   {
     "name": "E-mail",
-    "link": "mailto:vtmx22@gmail.com"
+    "link": "mailto:vtmx22@gmail.com",
+    "icon": "fas fa-envelope"
   },
   {
     "name": "Currículo (PDF)",
-    "link": "http://vitormelo.com.br/cv-vitor-melo.pdf"
+    "link": "http://vitormelo.com.br/cv-vitor-melo.pdf",
+    "icon": "fas fa-file-alt"
   },
   {
     "name": "Linkedin",
-    "link": "http://linkedin.com/in/vitormelo"
-  },
-  {
-    "name": "Facebook",
-    "link": "https://facebook.com/vitormelo22"
-  },
-  {
-    "name": "Google+",
-    "link": "https://www.google.com/+vitormelo22"
+    "link": "http://linkedin.com/in/vitormelo",
+    "icon": "fab fa-linkedin"
   },
   {
     "name": "Github",
-    "link": "https://github.com/vtmx"
+    "link": "https://github.com/vtmx",
+    "icon": "fab fa-github-square"
   },
   {
     "name": "Codepen",
-    "link": "http://codepen.io/vtmx"
+    "link": "http://codepen.io/vtmx",
+    "icon": "fab fa-codepen"
   },
   {
-    "name": "Behance",
-    "link": "https://www.behance.net/vitormelo"
-  },
-  {
-    "name": "Devianart",
-    "link": "http://vtmx22.deviantart.com/"
+    "name": "Facebook",
+    "link": "https://facebook.com/vitormelo22",
+    "icon": "fab fa-facebook-square"
   }
 ]

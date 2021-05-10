@@ -13,3 +13,14 @@ body {
 h2 {
   color: var(--section-title-fg);
 }
+
+#app {
+  display: grid;
+  grid-template-columns: 24vw 1fr;
+}
+
+main {
+  display: grid;
+  grid-column-start: 2;
+  padding: 32px;
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Sobre",
+    "link": "#about",
+    "icon": "fas fa-user"
+  },
+  {
+    "name": "Serviços",
+    "link": "#services",
+    "icon": "fas fa-tools"
+  },
+  {
+    "name": "Formação",
+    "link": "#education",
+    "icon": "fas fa-graduation-cap"
+  },
+  {
+    "name": "Certificações",
+    "link": "#certifications",
+    "icon": "fas fa-certificate"
+  },
+  {
+    "name": "Experiências",
+    "link": "#skills",
+    "icon": "fas fa-clipboard-list"
+  },
+  {
+    "name": "Habilidades",
+    "link": "#skills",
+    "icon": "fas fa-tag"
+  }
+]

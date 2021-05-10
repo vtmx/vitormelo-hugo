@@ -1,12 +1,14 @@
 <template>
   <Nav />
-  <About />
-  <Services />
-  <Education />
-  <Certifications />
-  <Skills />
-  <Experiences />
-  <Social />
+  <main>
+    <About />
+    <Services />
+    <Education />
+    <Certifications />
+    <Skills />
+    <Experiences />
+    <PageControl />
+  </main>
 </template>
 
 <script>
@@ -17,7 +19,7 @@ import Experiences from './components/Experiences.vue';
 import Nav from './components/Nav.vue';
 import Services from './components/Services.vue';
 import Skills from './components/Skills.vue';
-import Social from './components/Social.vue';
+import PageControl from './components/PageControl.vue';
 import './scss/main.scss';
 
 export default {
@@ -30,7 +32,7 @@ export default {
     Nav,
     Services,
     Skills,
-    Social,
+    PageControl,
   },
 };
 </script>

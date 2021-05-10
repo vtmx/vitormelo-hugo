@@ -5,7 +5,7 @@
       <div class="services">
         <div class="service" v-for="service in services" :key="service.name">
           <div class="circle">
-            <img class="icon" :src="'img/' + service.icon + '.svg'" :alt="service.name" />
+            <i :class="service.icon"></i>
           </div>
           <h3 class="name">{{ service.name }}</h3>
           <p class="description">{{ service.description }}</p>

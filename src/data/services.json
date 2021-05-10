@@ -2,16 +2,16 @@
   {
     "name": "Manutenção de Computadores",
     "description": "Formatação e instalação de softwares, manutenção e limpeza de S.O.",
-    "icon": "cog"
+    "icon": "fas fa-laptop"
   },
   {
     "name": "Edição de Imagens",
-    "description": "Criação de banners, fotomontagens, e tudo relacionado ao tratamento de imagens.",
-    "icon": "paint-brush"
+    "description": "Criação de banners, fotomontagens e tudo relacionado ao tratamento de imagens.",
+    "icon": "fas fa-image"
   },
   {
     "name": "Desenvolvimento de Sites",
-    "description": "Desenvolvo, e faço manutenção em sites, priorizando a acessibilidade e simplicidade.",
-    "icon": "globe"
+    "description": "Desenvolvo, e faço manutenção em sites priorizando a acessibilidade e simplicidade.",
+    "icon": "fab fa-chrome"
   }
 ]
