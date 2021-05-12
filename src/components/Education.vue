@@ -1,15 +1,19 @@
 <template>
-  <section id="education" class="section">
+  <section id="education">
     <div class="container">
       <h2 class="title">{{ title }}</h2>
-      <div class="education" v-for="education in education" :key="education.name">
-        <div class="name">{{ education.name }}</div>
-        <div class="org">
-          {{ education.org_name }}
-        </div>
-        <div class="time">
-          <span>{{ education.year_start }}</span> &ndash; <span>{{ education.year_end }}</span>
-        </div>
+      <div class="educations">
+        <template v-for="education in education" :key="education.name">
+          <div class="education">
+            <div class="name">{{ education.name }}</div>
+            <div class="org">
+              {{ education.org_name }}
+            </div>
+            <div class="time">
+              <span>{{ education.year_start }}</span> &ndash; <span>{{ education.year_end }}</span>
+            </div>
+          </div>
+        </template>
       </div>
     </div>
   </section>

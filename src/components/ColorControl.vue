@@ -1,40 +1,41 @@
 <template>
-  <div class="page-control">
-    <a href="#" title="Página anterior" @click="prevPage"><i class="fas fa-chevron-left"></i></a>
-    <a href="#" title="Próxima página" @click="nextPage"><i class="fas fa-chevron-right"></i></a>
+  <div class="color-control">
+    <a href="#" title="Modo escuro" @click="toggleColorSheme"><i class="fas fa-moon"></i></a>
+    <a href="#" title="Alto contraste" @click="toggleHighCoontrast"><i class="fas fa-adjust"></i></a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PageControl',
+  name: 'ColorControl',
 
   data() {
     return {};
   },
   methods: {
-    nextPage() {
-      alert('next page');
+    toggleColorSheme() {
+      document.body.classList.toggle('color-scheme-dark');
     },
-    prevPage() {
-      alert('prev page');
+    toggleHighCoontrast() {
+      alert('contrast');
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.page-control {
+.color-control {
   position: fixed;
-  bottom: 16px;
+  top: 16px;
   right: 16px;
   display: flex;
+  flex-direction: column;
   gap: 8px;
   line-height: 0;
 
   a {
-    padding: 12px 16px;
-    font-size: 18px;
+    padding: 16px;
+    font-size: 16px;
     background: var(--grey100);
     color: var(--grey500);
 

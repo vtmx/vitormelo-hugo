@@ -5,13 +5,17 @@
     </div>
     <div class="menu">
       <h2 class="invisible">Menu</h2>
-      <a v-for="item in nav" :key="item.name" :href="item.link"><i :class="item.icon" class="invisible"></i> {{ item.name }}</a>
+      <template v-for="item in nav" :key="item.name">
+        <a :href="item.link" :class="{ active: isActive }" @click="toggleActive($event)"><i :class="item.icon" class="invisible"></i> {{ item.name }}</a>
+      </template>
     </div>
 
     <div class="social">
-      <a v-for="social in social" :key="social.name" :href="social.link" :title="social.name" target="_blank"
-        ><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a
-      >
+      <template v-for="social in social" :key="social.name">
+        <a :href="social.link" :title="social.name" :class="{ active: isActive }" target="_blank"
+          ><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a
+        >
+      </template>
     </div>
   </nav>
 </template>
@@ -27,7 +31,17 @@ export default {
     return {
       nav,
       social,
+      isActive: false,
     };
+  },
+  methods: {
+    toggleActive(e) {
+      let menuItems = document.querySelectorAll('.menu a');
+      menuItems.forEach((item) => {
+        item.classList.remove('active');
+      });
+      e.target.classList.add('active');
+    },
   },
 };
 </script>
@@ -51,26 +65,26 @@ nav {
 }
 
 .menu {
-  &:hover a {
-    color: var(--grey600);
-  }
-
   a {
     display: block;
     flex-direction: column;
     padding: 16px 32px;
+    color: var(--grey600);
 
     &:hover {
       text-indent: 4px;
-      // background: linear-gradient(90deg, var(--grey100) 0%, var(--white) 100%);
       color: var(--primary);
     }
 
     &:active {
-      text-indent: 0;
       color: var(--grey800);
       transition: none;
     }
+  }
+
+  .active {
+    text-indent: 4px;
+    color: var(--primary);
   }
 }
 

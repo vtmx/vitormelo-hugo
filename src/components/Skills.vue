@@ -1,9 +1,11 @@
 <template>
-  <section id="skills" class="section">
+  <section id="skills">
     <div class="container">
       <h2 class="title">{{ title }}</h2>
-      <div class="skills" v-for="skill in skills" :key="skill">
-        <div>{{ skill }}</div>
+      <div class="skills">
+        <template v-for="skill in skills" :key="skill">
+          <div class="skill">{{ skill }}</div>
+        </template>
       </div>
     </div>
   </section>

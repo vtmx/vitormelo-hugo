@@ -28,5 +28,10 @@
     "name": "Habilidades",
     "link": "#skills",
     "icon": "fas fa-tag"
+  },
+  {
+    "name": "Contato",
+    "link": "#contact",
+    "icon": "fas fa-paper-plane"
   }
 ]
