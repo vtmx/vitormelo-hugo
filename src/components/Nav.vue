@@ -6,14 +6,25 @@
     <div class="menu">
       <h2 class="invisible">Menu</h2>
       <template v-for="item in nav" :key="item.name">
-        <a :href="item.link" :class="{ active: isActive }" @click="toggleActive($event)"><i :class="item.icon" class="invisible"></i> {{ item.name }}</a>
+        <a
+          :href="item.link"
+          :class="{ active: isActive }"
+          @click="toggleActive($event)"
+          ><i :class="item.icon" class="invisible"></i> {{ item.name }}</a
+        >
       </template>
     </div>
 
     <div class="social">
       <template v-for="social in social" :key="social.name">
-        <a :href="social.link" :title="social.name" :class="{ active: isActive }" target="_blank"
-          ><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a
+        <a
+          class="btn-icon"
+          :href="social.link"
+          :title="social.name"
+          :class="{ active: isActive }"
+          target="_blank"
+          ><i :class="social.icon"></i>
+          <span class="invisible">{{ social.name }}</span></a
         >
       </template>
     </div>
@@ -21,11 +32,11 @@
 </template>
 
 <script>
-import nav from '../data/nav.json';
-import social from '../data/social.json';
+import nav from "../data/nav.json";
+import social from "../data/social.json";
 
 export default {
-  name: 'NavSocial',
+  name: "NavSocial",
 
   data() {
     return {
@@ -36,11 +47,11 @@ export default {
   },
   methods: {
     toggleActive(e) {
-      let menuItems = document.querySelectorAll('.menu a');
+      let menuItems = document.querySelectorAll(".menu a");
       menuItems.forEach((item) => {
-        item.classList.remove('active');
+        item.classList.remove("active");
       });
-      e.target.classList.add('active');
+      e.target.classList.add("active");
     },
   },
 };
@@ -48,7 +59,9 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  //position: fixed;
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 24vw;
@@ -93,24 +106,6 @@ nav {
   gap: 8px;
   margin: 16px;
   line-height: 0;
-
-  a {
-    padding: 8px;
-    font-size: 24px;
-    background: var(--grey100);
-    color: var(--grey500);
-
-    &:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    &:active {
-      background: var(--grey800);
-      color: var(--white);
-      transition: none;
-    }
-  }
 }
 </style>
 

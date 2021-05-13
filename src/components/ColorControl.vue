@@ -1,23 +1,34 @@
 <template>
   <div class="color-control">
-    <a href="#" title="Modo escuro" @click="toggleColorSheme"><i class="fas fa-moon"></i></a>
-    <a href="#" title="Alto contraste" @click="toggleHighCoontrast"><i class="fas fa-adjust"></i></a>
+    <a href="#" class="btn-icon" title="Modo escuro" @click="toggleColorSheme"
+      ><i class="fas fa-moon"></i
+    ></a>
+    <a href="#" class="btn-icon" title="Escolha cor">
+      <i class="fas fa-palette"></i>
+    </a>
+    <a
+      href="#"
+      class="btn-icon"
+      title="Alto contraste"
+      @click="toggleHighCoontrast"
+      ><i class="fas fa-adjust"></i
+    ></a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ColorControl',
+  name: "ColorControl",
 
   data() {
     return {};
   },
   methods: {
     toggleColorSheme() {
-      document.body.classList.toggle('color-scheme-dark');
+      document.body.classList.toggle("color-scheme-dark");
     },
     toggleHighCoontrast() {
-      alert('contrast');
+      alert("contrast");
     },
   },
 };
@@ -32,23 +43,5 @@ export default {
   flex-direction: column;
   gap: 8px;
   line-height: 0;
-
-  a {
-    padding: 16px;
-    font-size: 16px;
-    background: var(--grey100);
-    color: var(--grey500);
-
-    &:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    &:active {
-      background: var(--grey800);
-      color: var(--white);
-      transition: none;
-    }
-  }
 }
 </style>
