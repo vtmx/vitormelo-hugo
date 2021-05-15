@@ -28,29 +28,53 @@
   --body-bg: var(--white);
   --body-fg: var(--grey700);
 
+  // selection
+  --selection-bg: var(--primary-light);
+  --selection-fg: var(--grey800);
+
+  // menu
+  --menu-fg: var(--grey600);
+  --menu-fg-hover: var(--primary);
+  --menu-fg-active: var(--grey800);
+
   // section
   --section-title-fg: #333;
 
   // button
-  --btn-bg: var(--grey300);
-  --btn-fg: var(--primary);
-  --btn-hover-bg: ();
-  --btn-hover-fg: ();
+  --btn-bg: var(--grey100);
+  --btn-fg: var(--grey500);
+  --btn-hover-bg: var(--primary);
+  --btn-hover-fg: var(--white);
+  --btn-active-bg: var(--grey800);
+  --btn-active-fg: var(--white);
 
   // dark mode
   .color-scheme-dark {
+    // body
     --body-bg: var(--dark-grey);
-    --body-fg: var(--grey50);
-  }
+    --body-fg: var(--grey300);
 
-  // high contrast
-  .contrast-hight {
-    --body-bg: var(--black);
-    --body-fg: var(--white);
-  }
-}
+    // menu
+    --menu-fg: var(--grey050);
+    --menu-fg-hover: var(--primary);
+    --menu-fg-active: var(--grey700);
 
-::selection {
-  background: var(--primary-light);
-  color: var(--grey800);
+    // section
+    --section-title-fg: var(--grey200);
+
+    // selection
+    --selection-bg: var(--primary-light);
+    --selection-fg: var(--grey800);
+
+    // button
+    --btn-bg: #1e1e1e;
+    --btn-fg: var(--grey200);
+    --btn-hover-bg: var(--primary-dark);
+    --btn-hover-fg: var(--white);
+    --btn-active-bg: var(--grey800);
+    --btn-active-fg: var(--white);
+
+    // section
+    --section-title-fg: var(--grey050);
+  }
 }
