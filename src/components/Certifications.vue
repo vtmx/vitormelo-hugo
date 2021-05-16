@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="title">{{ title }}</h2>
       <div class="certifications">
-        <template v-for="certification in certifications" :key="certification.name">
+        <template v-for="certification in certifications" :key="certification.id">
           <div class="certification">
             <div class="name">{{ certification.name }}</div>
             <div class="org">{{ certification.org_name }}</div>

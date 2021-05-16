@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="title">{{ title }}</h2>
       <div class="educations">
-        <template v-for="education in education" :key="education.name">
+        <template v-for="education in education" :key="education.id">
           <div class="education">
             <div class="name">{{ education.name }}</div>
             <div class="org">

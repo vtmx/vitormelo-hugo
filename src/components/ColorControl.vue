@@ -1,34 +1,26 @@
 <template>
   <div class="color-control">
-    <a href="#" class="btn-icon" title="Modo escuro" @click="toggleColorSheme"
-      ><i class="fas fa-moon"></i
-    ></a>
+    <a href="#" class="btn-icon" title="Modo escuro" @click="toggleColorSheme"><i class="fas fa-moon"></i></a>
     <a href="#" class="btn-icon" title="Escolha cor">
       <i class="fas fa-palette"></i>
     </a>
-    <a
-      href="#"
-      class="btn-icon"
-      title="Alto contraste"
-      @click="toggleHighCoontrast"
-      ><i class="fas fa-adjust"></i
-    ></a>
+    <a href="#" class="btn-icon" title="Alto contraste" @click="toggleHighCoontrast"><i class="fas fa-adjust"></i></a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ColorControl",
+  name: 'ColorControl',
 
   data() {
     return {};
   },
   methods: {
     toggleColorSheme() {
-      document.body.classList.toggle("color-scheme-dark");
+      document.body.classList.toggle('color-scheme-dark');
     },
     toggleHighCoontrast() {
-      alert("contrast");
+      alert('contrast');
     },
   },
 };
@@ -36,9 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .color-control {
-  position: fixed;
-  top: 16px;
-  right: 16px;
+  grid-area: color;
   display: flex;
   flex-direction: column;
   gap: 8px;

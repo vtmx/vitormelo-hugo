@@ -1,10 +1,8 @@
 <template>
   <section id="about">
-    <div class="container">
-      <h2 class="title">{{ about.title }}</h2>
-      <img class="avatar" :src="about.image" :alt="about.alt" />
-      <p>{{ about.text }}</p>
-    </div>
+    <h2 class="title">{{ about.title }}</h2>
+    <img class="avatar" :src="`${baseUrl}vitormelo.jpg`" :alt="about.alt" />
+    <p>{{ about.text }}</p>
   </section>
 </template>
 
@@ -16,10 +14,14 @@ export default {
   data() {
     return {
       about,
+      baseUrl: process.env.BASE_URL,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.avatar {
+  margin-bottom: var(--gap2);
+}
 </style>

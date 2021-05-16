@@ -33,12 +33,17 @@
   --selection-fg: var(--grey800);
 
   // menu
+  --logo-fg: var(--grey800);
   --menu-fg: var(--grey600);
   --menu-fg-hover: var(--primary);
   --menu-fg-active: var(--grey800);
 
   // section
-  --section-title-fg: #333;
+  --section-title-fg: var(--grey800);
+
+  // skill
+  --skill-bg: var(--grey100);
+  --skill-fg: var(--grey800);
 
   // button
   --btn-bg: var(--grey100);
@@ -54,7 +59,12 @@
     --body-bg: var(--dark-grey);
     --body-fg: var(--grey300);
 
+    // selection
+    --selection-bg: var(--primary-light);
+    --selection-fg: var(--grey800);
+
     // menu
+    --logo-fg: var(--grey050);
     --menu-fg: var(--grey050);
     --menu-fg-hover: var(--primary);
     --menu-fg-active: var(--grey700);
@@ -62,9 +72,9 @@
     // section
     --section-title-fg: var(--grey200);
 
-    // selection
-    --selection-bg: var(--primary-light);
-    --selection-fg: var(--grey800);
+    // skill
+    --skill-bg: var(--grey900);
+    --skill-fg: var(--white);
 
     // button
     --btn-bg: #1e1e1e;
@@ -76,5 +86,9 @@
 
     // section
     --section-title-fg: var(--grey050);
+
+    .avatar {
+      opacity: 0.75;
+    }
   }
 }

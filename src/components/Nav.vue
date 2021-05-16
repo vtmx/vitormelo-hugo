@@ -5,7 +5,7 @@
     </h1>
     <div class="menu">
       <h2 class="invisible">Menu</h2>
-      <template v-for="item in nav" :key="item.name">
+      <template v-for="item in nav" :key="item.id">
         <a :href="item.link" :class="{ active: isActive }" @click="toggleActive($event)"><i :class="item.icon" class="invisible"></i> {{ item.name }}</a>
       </template>
     </div>
@@ -48,9 +48,9 @@ export default {
 
 <style lang="scss" scoped>
 nav {
+  grid-area: menu;
   position: sticky;
   top: 0;
-  //position: fixed;
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 24vw;
@@ -59,18 +59,19 @@ nav {
 
 .logo a {
   display: flex;
-  height: 80px;
-  padding: 32px;
+  align-items: center;
+  padding: var(--gap3);
   font-weight: bold;
-  color: var(--grey800);
-  font-size: 24px;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--logo-fg);
 }
 
 .menu {
   a {
     display: block;
     flex-direction: column;
-    padding: 16px 32px;
+    padding: var(--gap2) var(--gap3);
     color: var(--menu-fg);
 
     &:hover {
