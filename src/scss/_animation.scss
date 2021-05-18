@@ -1,0 +1,47 @@
+:root {
+  --transition: all 0.2s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.fade-in {
+  animation: fade-in;
+}
+
+.fade-out {
+  animation: fade-out;
+}
+
+.slide-left {
+  animation: slide-left;
+}
+
+.slide-right {
+  animation: slide-right;
+}
+
+@keyframes fade-in {
+}
+
+@keyframes fade-out {
+}
+
+@keyframes slide-left {
+}
+
+@keyframes slide-right {
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animation {
+    animation: none !important;
+  }
+}
