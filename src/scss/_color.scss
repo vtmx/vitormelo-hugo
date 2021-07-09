@@ -53,7 +53,59 @@
   --btn-active-bg: var(--grey800);
   --btn-active-fg: var(--white);
 
-  // dark mode
+  // =contrast
+  .contrast {
+    // colors
+    --white: #fff;
+    --grey050: #000;
+    --grey100: #000;
+    --grey200: #000;
+    --grey300: #000;
+    --grey400: #000;
+    --grey500: #000;
+    --grey600: #000;
+    --grey700: #000;
+    --grey800: #000;
+    --grey900: #000;
+    --dark-grey: #000;
+    --black: #000;
+
+    // primary
+    --primary: blue;
+    --primary-light: blue;
+    --primary-dark: blue;
+
+    // body
+    --body-bg: var(--white);
+    --body-fg: var(--grey700);
+
+    // selection
+    --selection-bg: blue;
+    --selection-fg: var(--white);
+
+    // menu
+    --logo-fg: var(--grey800);
+    --menu-fg: var(--grey600);
+    --menu-fg-hover: var(--primary);
+    --menu-fg-active: var(--grey800);
+
+    // section
+    --section-title-fg: var(--grey800);
+
+    // skill
+    --skill-bg: var(--grey100);
+    --skill-fg: var(--grey800);
+
+    // button
+    --btn-bg: var(--grey100);
+    --btn-fg: var(--white);
+    --btn-hover-bg: var(--primary);
+    --btn-hover-fg: var(--white);
+    --btn-active-bg: var(--grey800);
+    --btn-active-fg: var(--white);
+  }
+
+  // =dark
   .dark {
     // body
     --body-bg: var(--dark-grey);
@@ -90,5 +142,57 @@
     .avatar {
       opacity: 0.75;
     }
+  }
+
+  // =dark.contrast
+  .dark.contrast {
+    // colors
+    --white: black;
+    --grey050: #fff;
+    --grey100: #fff;
+    --grey200: #fff;
+    --grey300: #fff;
+    --grey400: #fff;
+    --grey500: #fff;
+    --grey600: #fff;
+    --grey700: #fff;
+    --grey800: #fff;
+    --grey900: #fff;
+    --dark-grey: #fff;
+    --black: white;
+
+    // primary
+    --primary: aqua;
+    --primary-light: aqua;
+    --primary-dark: aqua;
+
+    // body
+    --body-bg: var(--white);
+    --body-fg: var(--grey700);
+
+    // selection
+    --selection-bg: yellow;
+    --selection-fg: black;
+
+    // menu
+    --logo-fg: var(--grey800);
+    --menu-fg: var(--grey600);
+    --menu-fg-hover: var(--primary);
+    --menu-fg-active: var(--grey800);
+
+    // section
+    --section-title-fg: var(--grey800);
+
+    // skill
+    --skill-bg: var(--grey100);
+    --skill-fg: var(--grey800);
+
+    // button
+    --btn-bg: var(--grey100);
+    --btn-fg: var(--white);
+    --btn-hover-bg: var(--primary);
+    --btn-hover-fg: var(--white);
+    --btn-active-bg: var(--grey800);
+    --btn-active-fg: var(--white);
   }
 }

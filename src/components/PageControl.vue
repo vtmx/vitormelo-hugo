@@ -1,12 +1,27 @@
 <template>
   <div class="page-control">
-    <a href="#" class="btn-icon" title="Página anterior" @click="prevPage"
+    <a
+      href="#"
+      id="prev-page"
+      class="btn-icon"
+      title="Página anterior"
+      @click="prevPage"
       ><i class="fas fa-chevron-left"></i
     ></a>
-    <a href="#" class="btn-icon" title="Próxima página" @click="nextPage"
+    <a
+      href="#"
+      id="next-page"
+      class="btn-icon"
+      title="Próxima página"
+      @click="nextPage"
       ><i class="fas fa-chevron-right"></i
     ></a>
-    <a href="#" class="btn-icon" title="Próxima página" @click="toTop"
+    <a
+      href="#"
+      id="to-top"
+      class="btn-icon"
+      title="Próxima página"
+      @click="toTop"
       ><i class="fas fa-chevron-up"></i
     ></a>
   </div>
@@ -20,12 +35,9 @@ export default {
     return {};
   },
   methods: {
-    nextPage() {
-      alert("next page");
-    },
-    prevPage() {
-      alert("prev page");
-    },
+    removeActive() {},
+    nextPage() {},
+    prevPage() {},
   },
 };
 </script>
