@@ -43,44 +43,5 @@ export default {
     PageControl,
     ColorControl,
   },
-  mounted() {
-    const container = document.querySelector("main");
-    const pages = container.querySelectorAll("main section");
-    const prevPageButton = document.querySelector("#prev-page");
-    const nextPageButton = document.querySelector("#next-page");
-
-    let firstPage = 0;
-    let lastPage = pages.length - 1;
-    let currentPage = firstPage;
-    pages[currentPage].classList.add("active");
-
-    function removeActive() {
-      container.querySelector(".active").classList.remove("active");
-    }
-
-    function activePage() {
-      pages[currentPage].classList.add("active");
-    }
-
-    prevPageButton.addEventListener("click", () => {
-      removeActive();
-      if (currentPage > firstPage) {
-        currentPage--;
-      } else {
-        currentPage = lastPage;
-      }
-      activePage();
-    });
-
-    nextPageButton.addEventListener("click", () => {
-      removeActive();
-      if (currentPage < lastPage) {
-        currentPage++;
-      } else {
-        currentPage = firstPage;
-      }
-      activePage();
-    });
-  },
 };
 </script>

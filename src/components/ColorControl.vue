@@ -3,9 +3,6 @@
     <a href="#" class="btn-icon" title="Modo escuro" @click="toggleColorSheme"
       ><i class="fas fa-moon"></i
     ></a>
-    <a href="#" class="btn-icon" title="Escolha cor">
-      <i class="fas fa-palette"></i>
-    </a>
     <a
       href="#"
       class="btn-icon"

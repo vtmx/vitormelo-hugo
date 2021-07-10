@@ -6,14 +6,21 @@
     <div class="menu">
       <h2 class="invisible">Menu</h2>
       <template v-for="item in nav" :key="item.id">
-        <a :href="item.link" :class="{ active: isActive }" @click="toggleActive($event)"><i :class="item.icon" class="invisible"></i> {{ item.name }}</a>
+        <a :href="item.link" @click="toggleActive($event)"
+          ><i :class="item.icon" class="invisible"></i> {{ item.name }}</a
+        >
       </template>
     </div>
 
     <div class="social">
       <template v-for="social in social" :key="social.name">
-        <a class="btn-icon" :href="social.link" :title="social.name" :class="{ active: isActive }" target="_blank"
-          ><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a
+        <a
+          class="btn-icon"
+          :href="social.link"
+          :title="social.name"
+          target="_blank"
+          ><i :class="social.icon"></i>
+          <span class="invisible">{{ social.name }}</span></a
         >
       </template>
     </div>
@@ -21,26 +28,40 @@
 </template>
 
 <script>
-import nav from '../data/nav.json';
-import social from '../data/social.json';
+import nav from "../data/nav.json";
+import social from "../data/social.json";
+import { Ripple } from "../js/ripple.js";
+const ripple = new Ripple();
 
 export default {
-  name: 'NavSocial',
+  name: "Nav",
 
   data() {
     return {
       nav,
       social,
-      isActive: false,
     };
   },
+  mounted() {
+    this.firstActive(".menu a");
+  },
   methods: {
+    firstActive(el) {
+      const menuList = document.querySelectorAll(el);
+      menuList[0].classList.add("active");
+    },
     toggleActive(e) {
-      let menuItems = document.querySelectorAll('.menu a');
-      menuItems.forEach((item) => {
-        item.classList.remove('active');
+      this.removeActive(".menu a", "active");
+      this.addActive(e, "active");
+      ripple.start(e, "span", "ripple");
+    },
+    addActive(e, className) {
+      e.target.classList.add(className);
+    },
+    removeActive(el, className) {
+      document.querySelectorAll(el).forEach((item) => {
+        item.classList.remove(className);
       });
-      e.target.classList.add('active');
     },
   },
 };
@@ -69,25 +90,30 @@ nav {
 
 .menu {
   a {
-    display: block;
+    display: flex;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
     padding: var(--gap2) var(--gap3);
     color: var(--menu-fg);
 
     &:hover {
-      text-indent: 4px;
+      transform: translate3d(4px, 0, 0);
+      background: var(--menu-bg-hover);
       color: var(--menu-fg-hover);
     }
 
     &:active {
+      background: var(--menu-bg-active);
       color: var(--menu-fg-active);
       transition: none;
     }
   }
 
   .active {
-    text-indent: 4px;
-    color: var(--primary);
+    transform: translate3d(4px, 0, 0);
+    background: var(--menu-bg-active);
+    color: var(--menu-fg-active);
   }
 }
 
