@@ -27,51 +27,44 @@ export default {
   name: "PageControl",
 
   data() {
-    return {};
+    return {
+      container: "",
+      firstPage: "",
+      lastPage: "",
+    };
   },
   mounted() {
-    const container = document.querySelector("main");
-    const pages = container.querySelectorAll("main section");
-    const prevPageButton = document.querySelector("#prev-page");
-    const nextPageButton = document.querySelector("#next-page");
-
-    let firstPage = 0;
-    let lastPage = pages.length - 1;
-    let currentPage = firstPage;
-    pages[currentPage].classList.add("active");
-
-    function removeActive() {
-      container.querySelector(".active").classList.remove("active");
-    }
-
-    function activePage() {
-      pages[currentPage].classList.add("active");
-    }
-
-    prevPageButton.addEventListener("click", () => {
-      removeActive();
-      if (currentPage > firstPage) {
-        currentPage--;
-      } else {
-        currentPage = lastPage;
-      }
-      activePage();
-    });
-
-    nextPageButton.addEventListener("click", () => {
-      removeActive();
-      if (currentPage < lastPage) {
-        currentPage++;
-      } else {
-        currentPage = firstPage;
-      }
-      activePage();
-    });
+    this.container = document.querySelector("main");
+    this.firstPage = this.container.firstElementChild;
+    this.lastPage = this.container.lastElementChild;
+    this.firstPage.classList.add("active");
   },
   methods: {
-    removeActive() {},
-    nextPage() {},
-    prevPage() {},
+    nextPage() {
+      let activePage = document.querySelector("section.active");
+      let nextPage = "";
+      if (this.lastPage.classList.contains("active")) {
+        nextPage = this.firstPage;
+      } else {
+        nextPage = activePage.nextElementSibling;
+      }
+      this.removeActive();
+      nextPage.classList.add("active");
+    },
+    prevPage() {
+      let activePage = document.querySelector("section.active");
+      let prevPage = "";
+      if (this.firstPage.classList.contains("active")) {
+        prevPage = this.lastPage;
+      } else {
+        prevPage = activePage.previousElementSibling;
+      }
+      this.removeActive();
+      prevPage.classList.add("active");
+    },
+    removeActive() {
+      document.querySelector("section.active").classList.remove("active");
+    },
   },
 };
 </script>

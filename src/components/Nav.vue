@@ -5,9 +5,9 @@
     </h1>
     <div class="menu">
       <h2 class="invisible">Menu</h2>
-      <template v-for="item in nav" :key="item.id">
-        <a :href="item.link" @click="toggleActive($event)"
-          ><i :class="item.icon" class="invisible"></i> {{ item.name }}</a
+      <template v-for="link in nav" :key="link.id">
+        <a :data="link.slug" :href="link.link" @click="toggleActive($event)"
+          ><i :class="link.icon" class="invisible"></i> {{ link.name }}</a
         >
       </template>
     </div>
@@ -51,7 +51,7 @@ export default {
     toggleActive(e) {
       this.removeActive(".menu a", "active");
       this.addActive(e, "active");
-      this.addRipple(e, "span", "ripple");
+      this.createRipple(e, "span", "ripple");
     },
     addActive(e, className) {
       e.target.classList.add(className);
@@ -61,7 +61,7 @@ export default {
         item.classList.remove(className);
       });
     },
-    addRipple(e, el, className) {
+    createRipple(e, el, className) {
       const btn = e.target;
       const ripple = document.createElement(el);
 
