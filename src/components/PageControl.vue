@@ -29,14 +29,19 @@ export default {
   data() {
     return {
       container: "",
+      pages: "",
       firstPage: "",
       lastPage: "",
     };
   },
   mounted() {
     this.container = document.querySelector("main");
+    this.pages = this.container.querySelectorAll("section");
     this.firstPage = this.container.firstElementChild;
     this.lastPage = this.container.lastElementChild;
+    this.pages.forEach((page) => {
+      page.classList.add("animation");
+    });
     this.firstPage.classList.add("active");
   },
   methods: {

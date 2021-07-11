@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import about from '../data/about.json';
+import about from "../data/about.json";
 export default {
-  name: 'About',
+  name: "About",
 
   data() {
     return {
