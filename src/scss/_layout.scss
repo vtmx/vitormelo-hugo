@@ -77,3 +77,18 @@ h2 {
 #contact {
   height: 500px;
 }
+
+@media (max-width: 960px) {
+  #app {
+    grid-template-areas:
+      'main'
+      'menu';
+    grid-template-columns: none;
+    grid-template-rows: 1fr 56px;
+    gap: 0;
+    min-height: 100vh;
+  }
+  #controls {
+    display: none !important;
+  }
+}
