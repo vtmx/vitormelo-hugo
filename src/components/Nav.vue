@@ -30,8 +30,6 @@
 <script>
 import nav from "../data/nav.json";
 import social from "../data/social.json";
-import { Ripple } from "../js/ripple.js";
-const ripple = new Ripple();
 
 export default {
   name: "Nav",
@@ -53,7 +51,7 @@ export default {
     toggleActive(e) {
       this.removeActive(".menu a", "active");
       this.addActive(e, "active");
-      ripple.start(e, "span", "ripple");
+      this.addRipple(e, "span", "ripple");
     },
     addActive(e, className) {
       e.target.classList.add(className);
@@ -62,6 +60,27 @@ export default {
       document.querySelectorAll(el).forEach((item) => {
         item.classList.remove(className);
       });
+    },
+    addRipple(e, el, className) {
+      const btn = e.target;
+      const ripple = document.createElement(el);
+
+      const btnWidth = btn.clientWidth;
+      const btnHeight = btn.clientHeight;
+      const diameter = Math.max(btnWidth, btnHeight);
+      const radius = diameter / 2;
+
+      ripple.style.width = ripple.style.height = `${diameter}px`;
+      ripple.style.top = `${e.clientY - (btn.offsetTop + radius)}px`;
+      ripple.style.left = `${e.clientX - (btn.offsetLeft + radius)}px`;
+
+      const oldRipple = document.querySelectorAll(".ripple")[0];
+      if (oldRipple) {
+        oldRipple.remove();
+      }
+
+      ripple.classList.add(className);
+      btn.insertAdjacentElement("beforeend", ripple);
     },
   },
 };

@@ -37,6 +37,7 @@
   --menu-fg: var(--grey600);
   --menu-fg-hover: var(--primary);
   --menu-fg-active: var(--primary);
+  --menu-ripple-bg: var(--grey300);
 
   // section
   --section-title-fg: var(--grey800);
@@ -68,6 +69,7 @@
     --menu-fg: var(--grey050);
     --menu-fg-hover: var(--primary);
     --menu-fg-active: var(--primary);
+    --menu-ripple-bg: var(--grey700);
 
     // section
     --section-title-fg: var(--grey200);
@@ -129,6 +131,7 @@
     --menu-fg-hover: white;
     --menu-bg-active: purple;
     --menu-fg-active: white;
+    --menu-ripple-bg: transparent;
 
     // section
     --section-title-fg: black;

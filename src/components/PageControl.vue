@@ -16,12 +16,7 @@
       @click="nextPage"
       ><i class="fas fa-chevron-right"></i
     ></a>
-    <a
-      href="#"
-      id="to-top"
-      class="btn-icon"
-      title="Próxima página"
-      @click="toTop"
+    <a href="#" id="to-top" class="btn-icon" title="Ir para topo" @click="toTop"
       ><i class="fas fa-chevron-up"></i
     ></a>
   </div>

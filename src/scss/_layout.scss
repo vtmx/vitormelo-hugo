@@ -28,17 +28,23 @@ main {
 }
 
 .menu a .ripple {
-  --top: 0;
-  --left: 0;
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: red;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--menu-ripple-bg);
   border-radius: 50%;
-  will-change: transform;
-  //transform: translate3d(var(--left), var(--top), 0);
-  transform: translateX(var(--left));
-  transform: translateY(var(--top));
+  transform: scale(0);
+  animation: ripple 0.8s linear;
+  opacity: 0.4;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
 
 section {
