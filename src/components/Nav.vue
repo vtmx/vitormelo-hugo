@@ -6,16 +6,25 @@
     <div class="menu">
       <h2 class="invisible">Menu</h2>
       <template v-for="link in nav" :key="link.id">
-        <a :data="link.slug" :href="link.link" @click="toggleActive($event)"
-          ><i :class="link.icon" class="invisible"></i> <span class="name">{{ link.name }}</span></a
+        <a
+          :data="link.slug"
+          :href="link.link"
+          @click.prevent="toggleActive($event)"
+          ><i :class="link.icon" class="invisible"></i>
+          <span class="name">{{ link.name }}</span></a
         >
       </template>
     </div>
 
     <div class="social">
       <template v-for="social in social" :key="social.name">
-        <a class="btn-icon" :href="social.link" :title="social.name" target="_blank"
-          ><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a
+        <a
+          class="btn-icon"
+          :href="social.link"
+          :title="social.name"
+          target="_blank"
+          ><i :class="social.icon"></i>
+          <span class="invisible">{{ social.name }}</span></a
         >
       </template>
     </div>
@@ -23,11 +32,11 @@
 </template>
 
 <script>
-import nav from '../data/nav.json';
-import social from '../data/social.json';
+import nav from "../data/nav.json";
+import social from "../data/social.json";
 
 export default {
-  name: 'Nav',
+  name: "Nav",
 
   data() {
     return {
@@ -36,30 +45,30 @@ export default {
     };
   },
   mounted() {
-    this.firstActive('.menu a');
-    if (window.matchMedia('(max-width: 720px)').matches) {
-      const icons = document.querySelectorAll('.menu i.invisible');
+    this.firstActive(".menu a");
+    if (window.matchMedia("(max-width: 720px)").matches) {
+      const icons = document.querySelectorAll(".menu i.invisible");
       icons.forEach((icon) => {
-        icon.classList.remove('invisible');
+        icon.classList.remove("invisible");
       });
     }
   },
   methods: {
     firstActive(el) {
       const menuList = document.querySelectorAll(el);
-      menuList[0].classList.add('active');
+      menuList[0].classList.add("active");
     },
     toggleActive(e) {
-      this.removeActive('.menu a', 'active');
-      this.addActive(e, 'active');
-      this.createRipple(e, 'span', 'ripple');
+      this.removeActive(".menu a", "active");
+      this.addActive(e, "active");
+      this.createRipple(e, "span", "ripple");
     },
     addActive(e, className) {
       e.target.classList.add(className);
     },
     removeActive(el, className) {
-      document.querySelectorAll(el).forEach((item) => {
-        item.classList.remove(className);
+      document.querySelectorAll(el).forEach((link) => {
+        link.classList.remove(className);
       });
     },
     createRipple(e, el, className) {
@@ -74,14 +83,14 @@ export default {
       ripple.style.width = ripple.style.height = `${diameter}px`;
       ripple.style.top = `${e.clientY - (btn.offsetTop + radius)}px`;
       ripple.style.left = `${e.clientX - (btn.offsetLeft + radius)}px`;
+      ripple.classList.add(className);
 
-      const oldRipple = document.querySelectorAll('.ripple')[0];
+      const oldRipple = document.querySelectorAll(".ripple")[0];
       if (oldRipple) {
         oldRipple.remove();
       }
 
-      ripple.classList.add(className);
-      btn.insertAdjacentElement('beforeend', ripple);
+      btn.insertAdjacentElement("beforeend", ripple);
     },
   },
 };
@@ -117,8 +126,12 @@ nav {
     padding: var(--gap2) var(--gap3);
     color: var(--menu-fg);
 
+    .name {
+      display: flex;
+      transition: all 0.2s;
+    }
+
     &:hover {
-      transform: translate3d(4px, 0, 0);
       background: var(--menu-bg-hover);
       color: var(--menu-fg-hover);
     }
@@ -128,12 +141,20 @@ nav {
       color: var(--menu-fg-active);
       transition: none;
     }
+
+    &:hover .name,
+    &:active .name {
+      transform: translate3d(4px, 0, 0);
+    }
   }
 
   .active {
-    transform: translate3d(4px, 0, 0);
     background: var(--menu-bg-active);
     color: var(--menu-fg-active);
+  }
+
+  .active .name {
+    transform: translate3d(4px, 0, 0);
   }
 }
 
