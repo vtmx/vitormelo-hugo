@@ -30,10 +30,11 @@ export default {
     this.firstPage = this.container.firstElementChild;
     this.lastPage = this.container.lastElementChild;
 
-    this.keyLeft = ['KeyA', 'KeyH', 'KeyK', 'ArrowLeft', 'ArrowUp'];
-    this.keyRight = ['KeyD', 'KeyL', 'KeyJ', 'Space', 'ArrowRight', 'ArrowDown'];
+    this.keyLeft = ['KeyA', 'KeyW', 'KeyH', 'KeyK', 'ArrowLeft', 'ArrowUp'];
+    this.keyRight = ['KeyD', 'KeyS', 'KeyL', 'KeyJ', 'Space', 'ArrowRight', 'ArrowDown'];
 
     window.addEventListener('keydown', (e) => {
+      e.preventDefault();
       if (this.keyRight.indexOf(e.code) !== -1) {
         this.nextPage();
       } else if (this.keyLeft.indexOf(e.code) !== -1) {
