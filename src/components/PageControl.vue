@@ -29,18 +29,17 @@ export default {
     this.container = document.querySelector('main');
     this.firstPage = this.container.firstElementChild;
     this.lastPage = this.container.lastElementChild;
+    this.keyLeft = ['KeyA', 'KeyH', 'ArrowLeft', 'ArrowUp'];
+    this.keyRight = ['KeyD', 'KeyL', 'ArrowRight', 'ArrowDown'];
+    window.addEventListener('keydown', (e) => {
+      if (this.keyRight.indexOf(e.code) !== -1) {
+        this.nextPage();
+      } else if (this.keyLeft.indexOf(e.code) !== -1) {
+        this.prevPage();
+      }
+    });
   },
   methods: {
-    nextPage() {
-      let activePage = document.querySelector('section.active');
-      let nextPage = '';
-      if (this.lastPage.classList.contains('active')) {
-        nextPage = this.firstPage;
-      } else {
-        nextPage = activePage.nextElementSibling;
-      }
-      Pages.togglePage(nextPage);
-    },
     prevPage() {
       let activePage = document.querySelector('section.active');
       let prevPage = '';
@@ -50,6 +49,16 @@ export default {
         prevPage = activePage.previousElementSibling;
       }
       Pages.togglePage(prevPage);
+    },
+    nextPage() {
+      let activePage = document.querySelector('section.active');
+      let nextPage = '';
+      if (this.lastPage.classList.contains('active')) {
+        nextPage = this.firstPage;
+      } else {
+        nextPage = activePage.nextElementSibling;
+      }
+      Pages.togglePage(nextPage);
     },
   },
 };
