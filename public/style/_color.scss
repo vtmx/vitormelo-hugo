@@ -28,6 +28,12 @@
   --body-bg: var(--white);
   --body-fg: var(--grey700);
 
+  // scroll
+  --scroll-bg: var(--grey200);
+  --scroll-thumb-bg: var(--grey400);
+  --scroll-thumb-bg-hover: var(--grey500);
+  --scroll-thumb-bg-active: var(--grey600);
+
   // selection
   --selection-bg: var(--primary-light);
   --selection-fg: var(--grey800);
@@ -59,6 +65,12 @@
     // body
     --body-bg: var(--dark-grey);
     --body-fg: var(--grey300);
+
+    // scroll
+    --scroll-bg: var(--grey900);
+    --scroll-thumb-bg: var(--grey800);
+    --scroll-thumb-bg-hover: var(--grey700);
+    --scroll-thumb-bg-active: var(--grey800);
 
     // selection
     --selection-bg: var(--primary-light);
@@ -120,6 +132,12 @@
     --body-bg: white;
     --body-fg: black;
 
+    // scroll
+    --scroll-bg: lightgray;
+    --scroll-thumb-bg: black;
+    --scroll-thumb-bg-hover: blue;
+    --scroll-thumb-bg-active: purple;
+
     // selection
     --selection-bg: blue;
     --selection-fg: white;
@@ -158,6 +176,12 @@
     // body
     --body-bg: black;
     --body-fg: white;
+
+    // scroll
+    --scroll-bg: gray;
+    --scroll-thumb-bg: white;
+    --scroll-thumb-bg-hover: aqua;
+    --scroll-thumb-bg-active: yellow;
 
     // selection
     --selection-bg: yellow;

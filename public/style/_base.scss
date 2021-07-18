@@ -2,6 +2,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -15,6 +16,23 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: var(--body-fg);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-bg-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--scroll-thumb-bg-active);
 }
 
 ::selection {
