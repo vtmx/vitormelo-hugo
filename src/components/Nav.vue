@@ -7,7 +7,7 @@
       <h2 class="invisible">Menu</h2>
       <template v-for="link in nav" :key="link.id">
         <a :data-page="link.slug" :href="link.link" @click.prevent="toggleActive($event)"
-          ><i :class="link.icon" class="invisible"></i> <span class="name">{{ link.name }}</span></a
+          ><i :class="link.icon"></i> <span class="name">{{ link.name }}</span></a
         >
       </template>
     </div>
@@ -38,12 +38,6 @@ export default {
   },
   mounted() {
     this.firstActive('.menu a');
-    if (window.matchMedia('(max-width: 720px)').matches) {
-      const icons = document.querySelectorAll('.menu i.invisible');
-      icons.forEach((icon) => {
-        icon.classList.remove('invisible');
-      });
-    }
   },
   methods: {
     firstActive(el) {
@@ -126,6 +120,10 @@ nav {
       transition: none;
     }
 
+    i {
+      display: none;
+    }
+
     &:hover .name,
     &:active .name {
       transform: translate3d(4px, 0, 0);
@@ -182,11 +180,12 @@ nav {
       display: flex;
       justify-items: center;
       flex-grow: 1;
-    }
 
-    i {
-      text-align: center;
-      font-size: 24px;
+      i {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+      }
     }
   }
   .menu a .name,
