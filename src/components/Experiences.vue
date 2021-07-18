@@ -21,18 +21,15 @@
 </template>
 
 <script>
-import experiences from "../data/experiences.json";
+import experiences from '../data/experiences.json';
 export default {
-  name: "Experiences",
+  name: 'Experiences',
 
   data() {
     return {
-      title: "Experiências",
+      title: 'Experiências',
       experiences,
     };
   },
 };
 </script>
-
-<style scoped>
-</style>

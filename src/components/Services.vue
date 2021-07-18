@@ -38,7 +38,7 @@ export default {
 .icon {
   display: flex;
   align-items: center;
-  margin-bottom: var(--gap1);
+  margin-bottom: 16px;
   font-size: 96px;
 }
 </style>

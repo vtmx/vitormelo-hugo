@@ -25,28 +25,22 @@
 
 main {
   grid-area: main;
-}
-
-.menu a .ripple {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--menu-ripple-bg);
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 0.8s linear;
-  opacity: 0.4;
+  position: relative;
 }
 
 section {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
   margin-bottom: var(--gap3);
+  opacity: 0;
 }
 
 section.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  animation: fade-in 1s;
 }
 
 h2 {

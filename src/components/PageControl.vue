@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import Pages from '../plugins/pages.js';
+
 export default {
   name: 'PageControl',
 
@@ -37,8 +39,7 @@ export default {
       } else {
         nextPage = activePage.nextElementSibling;
       }
-      this.removeActive();
-      nextPage.classList.add('active');
+      Pages.togglePage(nextPage);
     },
     prevPage() {
       let activePage = document.querySelector('section.active');
@@ -48,11 +49,7 @@ export default {
       } else {
         prevPage = activePage.previousElementSibling;
       }
-      this.removeActive();
-      prevPage.classList.add('active');
-    },
-    removeActive() {
-      document.querySelector('section.active').classList.remove('active');
+      Pages.togglePage(prevPage);
     },
   },
 };
