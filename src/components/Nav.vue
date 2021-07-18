@@ -96,6 +96,7 @@ nav {
   padding: var(--gap3);
   font-weight: bold;
   font-size: 32px;
+  text-transform: uppercase;
   line-height: 1;
   color: var(--logo-fg);
 }
