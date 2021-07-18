@@ -1,7 +1,7 @@
 <template>
   <section id="about">
     <h2 class="title">{{ about.title }}</h2>
-    <!-- <img class="avatar" :src="about.image" :alt="about.alt" /> -->
+    <img class="avatar" :src="about.image" :alt="about.alt" />
     <p>{{ about.text }}</p>
   </section>
 </template>
