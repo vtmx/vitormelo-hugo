@@ -1,12 +1,14 @@
 <template>
   <div class="page-control">
-    <a href="#" id="prev-page" class="btn-icon" title="Página anterior" @click="prevPage"
+    <a href="#" id="prev-page" class="btn-icon" title="Página anterior" @click.prevent="prevPage"
       ><i class="fas fa-chevron-left"></i
     ></a>
-    <a href="#" id="next-page" class="btn-icon" title="Próxima página" @click="nextPage"
+    <a href="#" id="next-page" class="btn-icon" title="Próxima página" @click.prevent="nextPage"
       ><i class="fas fa-chevron-right"></i
     ></a>
-    <a href="#" id="to-top" class="btn-icon" title="Ir para topo" @click="toTop"><i class="fas fa-chevron-up"></i></a>
+    <a href="#" id="to-top" class="btn-icon" title="Ir para topo" @click.prevent="toTop"
+      ><i class="fas fa-chevron-up"></i
+    ></a>
   </div>
 </template>
 
@@ -17,20 +19,14 @@ export default {
   data() {
     return {
       container: '',
-      pages: '',
       firstPage: '',
       lastPage: '',
     };
   },
   mounted() {
     this.container = document.querySelector('main');
-    this.pages = this.container.querySelectorAll('section');
     this.firstPage = this.container.firstElementChild;
     this.lastPage = this.container.lastElementChild;
-    this.pages.forEach((page) => {
-      page.classList.add('animation');
-    });
-    this.firstPage.classList.add('active');
   },
   methods: {
     nextPage() {

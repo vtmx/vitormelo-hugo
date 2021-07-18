@@ -1,0 +1,25 @@
+---
+// components
+import Nav from "../components/Nav.vue";
+import Main from "../components/Main.astro";
+import Controls from "../components/Controls.astro";
+---
+
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitor Melo</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+  <div id="app">
+    <Nav client:iddle />
+    <Main client:iddle />
+    <Controls client:iddle />
+  </div>
+</body>
+</html>

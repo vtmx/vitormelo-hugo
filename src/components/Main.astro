@@ -1,0 +1,27 @@
+---
+import About from '../components/About.vue';
+import Experiences from "../components/Experiences.vue";
+import Education from "../components/Education.vue";
+import Certifications from "../components/Certifications.vue";
+import Services from "../components/Services.vue";
+import Skills from "../components/Skills.vue";
+import Contact from "../components/Contact.vue";
+---
+
+<main>
+  <About />
+  <Experiences />
+  <Education />
+  <Certifications />
+  <Services />
+  <Skills />
+  <Contact />
+</main>
+
+<script>
+  document.querySelector('main section').classList.add('active');
+  const pages = document.querySelectorAll('main section');
+  pages.forEach((page) => {
+    page.classList.add('animation');
+  });
+</script>
