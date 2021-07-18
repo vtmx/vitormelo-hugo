@@ -29,8 +29,8 @@ export default {
     this.container = document.querySelector('main');
     this.firstPage = this.container.firstElementChild;
     this.lastPage = this.container.lastElementChild;
-    this.keyLeft = ['KeyA', 'KeyH', 'ArrowLeft', 'ArrowUp'];
-    this.keyRight = ['KeyD', 'KeyL', 'ArrowRight', 'ArrowDown'];
+    this.keyLeft = ['KeyA', 'KeyH', 'KeyK', 'ArrowLeft', 'ArrowUp'];
+    this.keyRight = ['KeyD', 'KeyL', 'KeyJ', 'Space', 'ArrowRight', 'ArrowDown'];
     window.addEventListener('keydown', (e) => {
       if (this.keyRight.indexOf(e.code) !== -1) {
         this.nextPage();

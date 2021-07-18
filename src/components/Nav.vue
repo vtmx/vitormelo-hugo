@@ -162,31 +162,35 @@ nav {
 
 @media (max-width: 960px) {
   nav {
-    display: flex;
-    justify-content: center;
+    position: sticky;
+    bottom: 0;
     width: auto;
     height: auto;
+    background: var(--nav-bg);
+    z-index: 1;
   }
   .menu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     display: flex;
     flex-direction: row-reverse;
+    flex-grow: 1;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    min-width: 100%;
 
     a {
+      display: flex;
+      justify-items: center;
       flex-grow: 1;
     }
 
     i {
+      text-align: center;
       font-size: 24px;
     }
   }
   .menu a .name,
+  .menu a[data-page='services'],
+  .menu a[data-page='contact'],
   .logo,
   .social {
     display: none;

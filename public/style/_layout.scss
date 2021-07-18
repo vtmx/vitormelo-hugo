@@ -57,6 +57,12 @@ h2 {
   margin-bottom: var(--gap3);
 }
 
+section .education:last-child,
+section .certification:last-child,
+section .experience:last-child {
+  margin-bottom: 0;
+}
+
 .education,
 .certification,
 .experience,
@@ -82,7 +88,24 @@ h2 {
     gap: 0;
     min-height: 100vh;
   }
+  main {
+    padding: 16px;
+    section {
+      display: none;
+      position: relative;
+      width: auto;
+      height: auto;
+      margin-bottom: 0;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      margin-bottom: 16px;
+      padding: 0;
+    }
+  }
   #controls {
-    display: none !important;
+    display: none;
   }
 }

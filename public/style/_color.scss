@@ -38,6 +38,9 @@
   --selection-bg: var(--primary-light);
   --selection-fg: var(--grey800);
 
+  // nav
+  --nav-bg: var(--grey200);
+
   // menu
   --logo-fg: var(--grey800);
   --menu-fg: var(--grey600);
@@ -75,6 +78,9 @@
     // selection
     --selection-bg: var(--primary-light);
     --selection-fg: var(--grey800);
+
+    // nav
+    --nav-bg: var(--grey900);
 
     // menu
     --logo-fg: var(--grey050);
@@ -142,6 +148,9 @@
     --selection-bg: blue;
     --selection-fg: white;
 
+    // nav
+    --nav-bg: white;
+
     // menu
     --logo-fg: black;
     --menu-fg: black;
@@ -186,6 +195,9 @@
     // selection
     --selection-bg: yellow;
     --selection-fg: black;
+
+    // nav
+    --nav-bg: black;
 
     // menu
     --logo-fg: white;

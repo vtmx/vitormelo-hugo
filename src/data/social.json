@@ -28,11 +28,5 @@
     "name": "Codepen",
     "link": "http://codepen.io/vtmx",
     "icon": "fab fa-codepen"
-  },
-  {
-    "id": 6,
-    "name": "Facebook",
-    "link": "https://facebook.com/vitormelo22",
-    "icon": "fab fa-facebook-square"
   }
 ]
