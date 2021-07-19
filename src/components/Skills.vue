@@ -33,4 +33,10 @@ export default {
   background: var(--skill-bg);
   color: var(--skill-fg);
 }
+
+@media (max-width: 960px) {
+  .skill {
+    padding: 8px 18px;
+  }
+}
 </style>
