@@ -1,0 +1,75 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--body-bg);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--body-fg);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-bg-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--scroll-thumb-bg-active);
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: all 0.2s;
+}
+
+img {
+  max-width: 100%;
+}
