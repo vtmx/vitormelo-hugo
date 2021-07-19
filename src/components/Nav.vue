@@ -74,40 +74,17 @@ export default {
 </script>
 
 <style lang="scss">
-nav {
-  grid-area: menu;
-  position: sticky;
-  top: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  width: auto;
-  height: 100vh;
-}
-
-.logo a {
-  display: flex;
-  align-items: center;
-  padding: var(--gap3);
-  font-weight: bold;
-  font-size: 32px;
-  text-transform: uppercase;
-  line-height: 1;
-  color: var(--logo-fg);
-}
-
 .menu {
   a {
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
     position: relative;
-    padding: var(--gap2) var(--gap3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 56px;
+    padding: 0 var(--gap3);
+    line-height: 1;
     color: var(--menu-fg);
-
-    .name {
-      display: flex;
-      transition: all 0.2s;
-    }
 
     &:hover {
       background: var(--menu-bg-hover);
@@ -120,23 +97,24 @@ nav {
       transition: none;
     }
 
-    i {
-      display: none;
+    .name {
+      display: flex;
+      transition: all 0.2s;
+    }
+    &:hover .name,
+    &:active .name,
+    &.active .name {
+      transform: translate3d(4px, 0, 0);
     }
 
-    &:hover .name,
-    &:active .name {
-      transform: translate3d(4px, 0, 0);
+    i {
+      display: none;
     }
   }
 
   .active {
     background: var(--menu-bg-active);
     color: var(--menu-fg-active);
-  }
-
-  .active .name {
-    transform: translate3d(4px, 0, 0);
   }
 
   .ripple {
@@ -153,29 +131,10 @@ nav {
   }
 }
 
-.social {
-  display: flex;
-  gap: 8px;
-  margin: 16px;
-  line-height: 0;
-}
-
 @media (max-width: 960px) {
-  .logo,
   .menu a[data-page='services'],
-  .menu a[data-page='contact'],
-  .menu a .name,
-  .social {
+  .menu a[data-page='education'] {
     display: none;
-  }
-
-  nav {
-    position: sticky;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    background: var(--nav-bg);
-    z-index: 1;
   }
 
   .menu {
@@ -188,13 +147,26 @@ nav {
 
     a {
       display: flex;
-      justify-items: center;
+      align-items: center;
       flex-grow: 1;
+      height: auto;
+      padding: 0;
 
       i {
         display: block;
+        margin-bottom: 6px;
         text-align: center;
-        font-size: 24px;
+        font-size: 18px;
+      }
+
+      .name {
+        font-size: 13px;
+      }
+
+      &:hover .name,
+      &:active .name,
+      &.active .name {
+        transform: none;
       }
 
       .ripple {
