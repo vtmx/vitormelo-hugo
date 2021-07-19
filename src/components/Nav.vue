@@ -80,7 +80,7 @@ nav {
   top: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  width: 24vw;
+  width: auto;
   height: 100vh;
 }
 
@@ -138,6 +138,7 @@ nav {
   .active .name {
     transform: translate3d(4px, 0, 0);
   }
+
   .ripple {
     position: absolute;
     top: 0;
@@ -160,6 +161,14 @@ nav {
 }
 
 @media (max-width: 960px) {
+  .logo,
+  .menu a[data-page='services'],
+  .menu a[data-page='contact'],
+  .menu a .name,
+  .social {
+    display: none;
+  }
+
   nav {
     position: sticky;
     bottom: 0;
@@ -168,6 +177,7 @@ nav {
     background: var(--nav-bg);
     z-index: 1;
   }
+
   .menu {
     display: flex;
     flex-direction: row-reverse;
@@ -186,14 +196,20 @@ nav {
         text-align: center;
         font-size: 24px;
       }
+
+      .ripple {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background: var(--menu-ripple-bg);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 0.8s linear;
+        opacity: 0.4;
+      }
     }
-  }
-  .menu a .name,
-  .menu a[data-page='services'],
-  .menu a[data-page='contact'],
-  .logo,
-  .social {
-    display: none;
   }
 }
 </style>
